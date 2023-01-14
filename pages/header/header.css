@@ -28,10 +28,15 @@
 
 .header__link {
   list-style: none;
+  margin-bottom: 10px;
   font-style: normal;
   font-weight: 400;
   font-size: 50px;
   color: var(--orange);
+}
+
+.header__link:last-child {
+  margin-bottom: 0;
 }
 
 .header__button-conteiner {
@@ -52,10 +57,18 @@
   margin-bottom: 16px;
 }
 
-.header__button_state {
-  width: 50px;
+.header__button:last-child {
+    margin-bottom: 0;
+}
+
+.header__button_state-open {
   height: 50px;
   background-image: url("../../images/close__btn.svg");
+}
+
+.header__button_state-close {
+  height: 10px;
+  background-image: url("../../images/open__btn.svg");
 }
 
 .header__button_lang {

@@ -46,12 +46,13 @@
   color: var(--orange);
   cursor: pointer;
   outline: none;
+  /* transition: .7s linear; */
 }
 
 .header__link:focus {
   outline: 3px solid var(--orange);
-  background: var(--orange);
-  color: var(--red);
+  /* background: var(--orange); */
+  /* color: var(--red); */
   border-radius: 5px;
 }
 
@@ -76,7 +77,6 @@
   background-color: var(--red);
   margin-bottom: 16px;
   padding: 0;
- 
 }
 
 .header__button:focus {
@@ -105,7 +105,6 @@
   background-image: url("../../images/close__btn.svg");
 }
 
-
 .header__button_lang {
   margin-right: 135px;
   width: auto;
@@ -120,4 +119,10 @@
   width: 50px;
   height: 100px;
   background-image: url("../../images/theme__btn.svg");
+}
+
+.header__link:hover {
+  background: var(--orange);
+  color: var(--red);
+  border-radius: 5px;
 }

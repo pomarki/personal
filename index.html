@@ -13,34 +13,38 @@
     <body class="body">
       <div class="wrapper">
         <header class="header header_type_close">
-          <h1 class="header__title">главная /</h1>
-          <nav class="header__link-list">
-            <a tabindex="1" class="header__link">связь</a>
-            <a tabindex="2" class="header__link header_invisible-element"
-              >резюме</a
-            >
-            <a tabindex="3" class="header__link header_invisible-element"
-              >работы</a
-            >
-            <a tabindex="4" class="header__link header_invisible-element"
-              >обо мне</a
-            >
-          </nav>
-          <div class="header__button-conteiner">
-            <button
-              tabindex="5"
-              class="header__button header__button-state"
-            ></button>
-            <button
-              tabindex="6"
-              class="header__button header__button_lang header_invisible-element"
-            >
-              EN
-            </button>
-            <button
-              tabindex="7"
-              class="header__button header__button_theme header_invisible-element"
-            ></button>
+          <div class="header__container">
+            <h1 class="header__title">
+              главная / <span class="header__title-about">обо мне</span>
+            </h1>
+            <nav class="header__link-list">
+              <!-- <a tabindex="1" class="header__link">связь</a> -->
+              <a tabindex="2" class="header__link header_invisible-element"
+                >резюме</a
+              >
+              <a tabindex="3" class="header__link header_invisible-element"
+                >работы</a
+              >
+              <a tabindex="4" class="header__link header_invisible-element"
+                >связь</a
+              >
+            </nav>
+            <div class="header__button-conteiner">
+              <button
+                tabindex="5"
+                class="header__button header__button-state"
+              ></button>
+              <button
+                tabindex="6"
+                class="header__button header__button_lang header_invisible-element"
+              >
+                EN
+              </button>
+              <button
+                tabindex="7"
+                class="header__button header__button_theme header_invisible-element"
+              ></button>
+            </div>
           </div>
         </header>
         <main class="main">
@@ -60,7 +64,57 @@
               </div>
             </div>
           </section>
-          <section class="about"></section>
+          <section class="about">
+            <div class="about__container">
+              <img
+                src="images/Denis__photo.jpg"
+                alt="Фото автора"
+                class="about__photo"
+              />
+              <div class="about__text-block">
+                <p class="about__text-item">
+                  Меня зовут Денис. Я занимаюсь веб-разработкой. В свободное
+                  время читаю научно-популярную литературу, играю с семьёй в
+                  настолки, смотрю сериалы, готовлю сливовые пироги по рецепту
+                  “The New York Times”, смеюсь над видео о том, как летающая
+                  собака ест банан, пишу
+                  <a href="#" class="body__link">фантастические рассказы</a>,
+                  бегаю по лесу, учу Phyton и SQL, словом живу самой
+                  обыкновенной жизнью.
+                </p>
+                <p class="about__text-item">
+                  <a href="#" class="body__link">Александр Патлух</a> однажды
+                  сказал, что вёрстка сайтов - один из способов самовыражения. А
+                  самовыражение находится на самом верхнем уровне пирамиды
+                  потребностей по <a href="#" class="body__link">Маслоу</a>. Так
+                  что дробные значения ширины в макете Figma, поиск пропущенной
+                  фигурной скобки в коде JS, загадочные ответы сервера на
+                  правильные запросы - это не только повод, чтобы выразиться, но
+                  и стремление самовыразиться.
+                </p>
+                <p class="about__text-item">
+                  Ещё я очень люблю клеточные автоматы. Если бы их можно было
+                  держать в аквариуме, как морских рыбок, актиний и креветок, то
+                  мой аквариум вмещал бы тонну воды, а то и две.
+                </p>
+              </div>
+              <div class="about__links-container">
+                <ul class="about__links-block">
+                  <li class="about__link">
+                    <a class="body__link body__link_about">Plum Torte</a>
+                  </li>
+                  <li class="about__link">
+                    <a class="body__link body__link_about">Bat Enjoys Banana</a>
+                  </li>
+                  <li class="about__link">
+                    <a class="body__link body__link_about"
+                      >Conway's Game of Life</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
           <section class="resume"></section>
           <section class="works"></section>
           <section class="links"></section>

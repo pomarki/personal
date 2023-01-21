@@ -40,6 +40,7 @@ html {
   color: var(--black);
   background-color: var(--white);
   transition: background-color 700ms linear;
+  position: relative;
 }
 
 .body_theme_dark {
@@ -72,6 +73,7 @@ html {
 
 .body__link {
   text-decoration: none;
+  color: var(--red)
 }
 
 .body__link:hover {

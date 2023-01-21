@@ -4,6 +4,8 @@ const worksBtn = document.querySelector(".start__link_works");
 const resumeBtn = document.querySelector(".start__link_resume");
 const linksBtn = document.querySelector(".start__link_links");
 const headerStateBtn = document.querySelector(".header__button-state");
+const headerThemeBtn = document.querySelector(".header__button_theme");
+const bodyBlock = document.querySelector(".body");
 
 const headerSection = document.querySelector(".header");
 const headerLinks = document.querySelectorAll(".header__link");
@@ -26,6 +28,11 @@ const toggleHeader = () => {
   };
   blockToggle(headerLinksArr, 0);
   blockToggle(headerBtnsArr, 0);
+};
+
+const toggleTheme = () => {
+  bodyBlock.classList.toggle("body_theme_dark");
+  headerThemeBtn.classList.toggle("header__button_theme-dark")
 };
 
 headerStateBtn.addEventListener("click", toggleHeader);
@@ -53,3 +60,5 @@ linksBtn.addEventListener("mouseover", (e) => {
 aboutBtn.addEventListener("click", () => {
   mainContainer.classList.add("start__container_invisible");
 });
+
+headerThemeBtn.addEventListener("click", toggleTheme);

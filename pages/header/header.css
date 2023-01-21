@@ -32,7 +32,7 @@
 .header__link-list {
   display: flex;
   flex-direction: column;
-  width: 240px;
+  width: 20%;
   margin: 30px 0 0 28px;
   padding: 0;
 }
@@ -45,8 +45,10 @@
   font-size: 50px;
   color: var(--orange);
   cursor: pointer;
+  text-align: left;
   outline: none;
-  /* transition: .7s linear; */
+  line-height: 63px;
+ 
 }
 
 .header__link:focus {
@@ -121,8 +123,12 @@
   background-image: url("../../images/theme__btn.svg");
 }
 
+.header__button_theme-dark {
+  transform: rotate(180deg)
+}
+
 .header__link:hover {
-  background: var(--orange);
+  background: left 50% var(--orange);
   color: var(--red);
   border-radius: 5px;
 }

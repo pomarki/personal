@@ -6,18 +6,18 @@
   position: fixed;
   top: 0;
   left: 0;
-  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   z-index: 1;
 }
 
 .header__container {
-  margin: 30px 0 0 0;
-  
+  /*  margin: 30px 0 0 0; */
   min-width: 1280px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 662px 418px 60px;
+  grid-template-rows: 110px 1fr;
 }
 
 .header__title {
@@ -26,12 +26,13 @@
   font-weight: 400;
   font-size: 50px;
   color: var(--white);
- 
+  cursor: default;
+  box-sizing: border-box;
+  align-self: center;
 }
 
-.header__title-about {
+.header__title_about {
   color: var(--orange);
-  cursor: default;
 }
 
 .header_invisible-element {
@@ -46,8 +47,12 @@
   display: flex;
   flex-direction: column;
   width: 20%;
-  margin: 30px 0 0 28px;
+  /* margin: 30px 0 0 28px; */
   padding: 0;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 
 .header__link {
@@ -76,7 +81,13 @@
 
 .header__button-conteiner {
   margin-top: 30px;
-  flex-grow: 1;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  align-self: start;
+  justify-self: end;
+  /*  flex-grow: 1; */
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -118,7 +129,7 @@
   height: 50px;
   margin-top: 0;
   background-image: url("../../images/close__btn.svg");
-  transition: all .5s linear;
+  transition: all 0.5s linear;
 }
 
 .header__button_lang {
@@ -129,14 +140,14 @@
   font-weight: 400;
   font-size: 50px;
   color: var(--white);
-  transition: all .5s linear;
+  transition: all 0.5s linear;
 }
 
 .header__button_theme {
   width: 50px;
   height: 100px;
   background-image: url("../../images/theme__btn.svg");
-  transition: all .5s linear;
+  transition: all 0.5s linear;
 }
 
 .header__button_theme-dark {
@@ -150,8 +161,8 @@
 }
 
 .header__button_theme:hover {
- background-image: url("../../images/theme__btn_yellow.svg");
- transition: all 700ms linear;
+  background-image: url("../../images/theme__btn_yellow.svg");
+  transition: all 700ms linear;
 }
 
 .header__button-state:hover {
@@ -167,4 +178,10 @@
 .header__button_lang:hover {
   color: var(--orange);
   transition: all 700ms linear;
+}
+
+.header__title-container {
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: 2;
 }

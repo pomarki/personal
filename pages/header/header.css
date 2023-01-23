@@ -13,10 +13,9 @@
 }
 
 .header__container {
-  /*  margin: 30px 0 0 0; */
   min-width: 1280px;
   display: grid;
-  grid-template-columns: 662px 418px 60px;
+  grid-template-columns: max-content, min-content, 1fr 60px;
   grid-template-rows: 110px 1fr;
 }
 
@@ -31,29 +30,17 @@
   align-self: center;
 }
 
-.header__title_about {
-  color: var(--orange);
-}
-
-.header_invisible-element {
-  display: none;
-}
-
-.header_type_close {
-  height: 110px;
-}
-
 .header__link-list {
   display: flex;
   flex-direction: column;
-  width: 20%;
-  /* margin: 30px 0 0 28px; */
+  align-self: start;
+  width: 320px;
   padding: 0;
-  grid-column-start: 1;
-  grid-column-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
-}
+ }
 
 .header__link {
   list-style: none;
@@ -70,8 +57,6 @@
 
 .header__link:focus {
   outline: 3px solid var(--orange);
-  /* background: var(--orange); */
-  /* color: var(--red); */
   border-radius: 5px;
 }
 
@@ -81,21 +66,19 @@
 
 .header__button-conteiner {
   margin-top: 30px;
-  grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 3;
   align-self: start;
   justify-self: end;
-  /*  flex-grow: 1; */
   display: flex;
   flex-direction: column;
   justify-content: end;
 }
 
 .header__button {
-  margin-right: 140px;
-  align-self: flex-end;
+  align-self: center;
   width: 50px;
   border: 0;
   cursor: pointer;
@@ -104,11 +87,6 @@
   padding: 0;
 }
 
-/* .header__button:focus {
-  outline: 3px solid var(--orange);
-  border-radius: 100px;
-}
- */
 .header__button:last-child {
   margin-bottom: 0;
 }
@@ -133,7 +111,7 @@
 }
 
 .header__button_lang {
-  margin-right: 135px;
+  /* margin-right: 135px; */
   width: auto;
   padding: 0;
   font-style: normal;
@@ -184,4 +162,26 @@
   display: flex;
   grid-column-start: 1;
   grid-column-end: 2;
+}
+
+.header__title-actual {
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  cursor: default;
+  box-sizing: border-box;
+  align-self: center;
+}
+
+.header__title_about {
+  color: var(--orange);
+}
+
+.header_invisible-element {
+  display: none;
+}
+
+.header_type_close {
+  height: 110px;
 }

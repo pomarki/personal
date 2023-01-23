@@ -19,11 +19,12 @@ const toggleHeader = () => {
 
   const blockToggle = (arr, ignore) => {
     arr.forEach((item, index) => {
-      if (index === ignore) {
+/*       if (index === ignore) {
         return;
       } else {
         item.classList.toggle("header_invisible-element");
-      }
+      } */
+      item.classList.toggle("header_invisible-element");
     });
   };
   blockToggle(headerLinksArr, 0);

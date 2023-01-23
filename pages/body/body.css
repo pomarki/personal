@@ -80,6 +80,9 @@ html {
   color: var(--red);
   cursor: pointer;
   transition: color 0.7s linear;
+  /* text-decoration: underline; */
+  background: var(--orange);
+  border-radius: 5px;
 }
 
 .body__wrapper {

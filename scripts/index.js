@@ -14,20 +14,20 @@ const headerLinksArr = Array.from(headerLinks);
 const headerBtnsArr = Array.from(headerBtns);
 
 const toggleHeader = () => {
-  headerStateBtn.classList.toggle("header__button-state_close");
+  headerStateBtn.classList.toggle("header__button-state_type_close");
   headerSection.classList.toggle("header_type_close");
 
   const blockToggle = (arr, ignore) => {
     arr.forEach((item, index) => {
-/*       if (index === ignore) {
+      if (index === ignore) {
         return;
       } else {
         item.classList.toggle("header_invisible-element");
-      } */
-      item.classList.toggle("header_invisible-element");
+      }
+      
     });
   };
-  blockToggle(headerLinksArr, 0);
+  blockToggle(headerLinksArr);
   blockToggle(headerBtnsArr, 0);
 };
 

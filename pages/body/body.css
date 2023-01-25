@@ -1,8 +1,8 @@
 :root {
-  --dark-blue: #073B4C;
+  --dark-blue: #073b4c;
   --black: #000000;
   --white: #ffffff;
-  --blue: #118AB2;
+  --blue: #118ab2;
   --gray: #e4e7e2;
   --red: #ef476f;
   --green: #06d6a0;
@@ -54,8 +54,7 @@ html {
 }
 
 .body_footer {
-  /* margin-top: 50px; */
-  display: none;
+   display: none;
 }
 
 .body_type_active {
@@ -73,15 +72,26 @@ html {
 
 .body__link {
   text-decoration: none;
-  color: var(--red)
+  color: var(--red);
+}
+
+.body__link_about {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
 }
 
 .body__link:hover {
   color: var(--red);
   cursor: pointer;
   transition: color 0.7s linear;
-  /* text-decoration: underline; */
   background: var(--orange);
+  border-radius: 5px;
+}
+
+.body__link_about:hover {
+  color: var(--orange);
+  background: var(--red);
   border-radius: 5px;
 }
 

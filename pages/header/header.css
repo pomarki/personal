@@ -22,7 +22,7 @@
   min-width: 1280px;
   cursor: default;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: max-content 1fr 1fr;
   grid-template-rows: 110px 1fr;
 }
 
@@ -39,6 +39,7 @@
   grid-template-columns: 1fr min-content 320px;
   grid-template-rows: 110px;
   align-self: center;
+  justify-self: start;
 }
 
 .header__links-slot {
@@ -54,8 +55,8 @@
 }
 
 .header__buttons-slot {
-  grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 3;
   align-self: start;
@@ -100,8 +101,8 @@
   height: 10px;
   margin-right: 5px;
   background-image: url("../../images/open__btn.svg");
-  grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
   justify-self: end;

@@ -6,6 +6,8 @@
   --gray: #e4e7e2;
   --red: #ef476f;
   --green: #06d6a0;
+  --light-green: #a5f0dd;
+  --extra-light-green: #CDF7EC;
   --violet: #67468b;
   --orange: #ffd166;
   --light-gray: rgba(217, 217, 217, 0.1);
@@ -54,7 +56,7 @@ html {
 }
 
 .body_footer {
-   display: none;
+  display: none;
 }
 
 .body_type_active {

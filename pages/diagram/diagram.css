@@ -13,13 +13,6 @@
   flex-direction: row;
 }
 
-/* .diagram__img {
-  width: 190px;
-  height: 190px;
-  background: no-repeat url("../../images/diagram-01.svg");
-  align-self: center;
-} */
-
 .diagram__canvas {
   display: flex;
   justify-content: space-between;
@@ -36,9 +29,10 @@
   stroke-width: 15; /* ширина обводки */
   cursor: pointer;
   animation-name: render;
-  animation-duration: 1.5s;
-  transition-property: all; 
-  transition-duration: 1.5s;
+  animation-duration: 2.5s;
+  transition-property: all;
+  transition-duration: 2.5s;
+ 
 }
 
 .diagram__unit:nth-child(1) {
@@ -58,35 +52,45 @@
   stroke-dashoffset: -100;
 }
 
-.diagram__legend {
-  display: grid;
-  max-height: 80px;
-  grid-template-columns: 10px 1fr;
-  grid-template-rows: repeat(auto, 3);
-  justify-items: start;
-  align-items: center;
+.diagram__unit:hover {
+  stroke-width: 18;
 }
 
-.diagram__legend-item {
+.diagram__legend-marker {
+  position: relative;
+  padding-left: 10px;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  margin: 0;
+  margin: 0 0 10px 0;
+  list-style: none;
 }
 
-.diagram__marker {
-  width: 10px;
-  height: 10px;
+.diagram__list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
 }
 
-.diagram__marker_html {
-  background: no-repeat url("../../images/marker-html.svg");
+.diagram__legend-marker::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50px;
+  background-color: black;
 }
 
-.diagram__marker_css {
-  background: no-repeat url("../../images/marker-css.svg");
+.diagram__legend-marker:nth-child(1)::before {
+  background-color: var(--red);
 }
 
-.diagram__marker_js {
-  background: no-repeat url("../../images/marker-js.svg");
+.diagram__legend-marker:nth-child(2)::before {
+  background-color: var(--blue);
+}
+
+.diagram__legend-marker:nth-child(3)::before {
+  background-color: var(--orange);
 }

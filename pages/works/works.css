@@ -85,60 +85,53 @@
   font-size: 25px;
   color: var(--black);
 }
-.stack {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 3;
-  grid-row-end: 4;
-  margin-bottom: 25px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: start;
-}
-
-.stack__subtitle {
-  margin: 0;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  color: var(--black);
-}
-
-.stack__bracket {
-  margin: 0;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 60px;
-  color: var(--orange);
-}
-.stack__bracket:first-of-type {
-  margin: 0 0 0 12px;
-}
-
-.stack__list {
-  padding: 0;
-  max-width: 550px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.stack__list-item {
-  margin: 0 3px 3px 3px;
-  list-style: none;
-  font-weight: 400;
-  font-size: 18px;
-  color: var(--red);
-}
 
 .diagram {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 4;
-  background-color: blueviolet;
+  display: flex;
+  flex-direction: row;
+}
+
+.diagram__img {
+  width: 190px;
+  height: 190px;
+  background: no-repeat url("../../images/diagram-01.svg");
+  align-self: center;
+}
+
+.diagram__legend {
+  display: grid;
+  max-height: 80px;
+  grid-template-columns: 10px 1fr;
+  grid-template-rows: repeat(auto, 3);
+  justify-items: start;
+  align-items: center;
+  
+}
+
+.diagram__legend-item {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  margin: 0;
+}
+
+.diagram__marker {
+  width: 10px;
+  height: 10px;
+}
+
+.diagram__marker_html {
+  background: no-repeat url("../../images/marker-html.svg");
+}
+
+.diagram__marker_css {
+  background: no-repeat url("../../images/marker-css.svg");
+}
+
+.diagram__marker_js {
+  background: no-repeat url("../../images/marker-js.svg");
 }

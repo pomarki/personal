@@ -10,12 +10,14 @@ const bodyBlock = document.querySelector(".body");
 const headerSection = document.querySelector(".header");
 const headerLinks = document.querySelectorAll(".header__link");
 const headerBtns = document.querySelectorAll(".header__button");
+const heaferLinksSlot = document.querySelector(".header__links-slot");
 const headerLinksArr = Array.from(headerLinks);
 const headerBtnsArr = Array.from(headerBtns);
 
 const toggleHeader = () => {
   headerStateBtn.classList.toggle("header__button-state_type_close");
   headerSection.classList.toggle("header_type_close");
+  heaferLinksSlot.classList.toggle("header_invisible-element");
 
   const blockToggle = (arr, ignore) => {
     arr.forEach((item, index) => {
@@ -24,7 +26,6 @@ const toggleHeader = () => {
       } else {
         item.classList.toggle("header_invisible-element");
       }
-      
     });
   };
   blockToggle(headerLinksArr);
@@ -33,7 +34,7 @@ const toggleHeader = () => {
 
 const toggleTheme = () => {
   bodyBlock.classList.toggle("body_theme_dark");
-  headerThemeBtn.classList.toggle("header__button_theme-dark")
+  headerThemeBtn.classList.toggle("header__button_theme-dark");
 };
 
 headerStateBtn.addEventListener("click", toggleHeader);

@@ -18,6 +18,10 @@ html {
   height: 100%;
 }
 
+*:focus {
+  outline: 2px solid var(--orange);
+}
+
 @keyframes showBlock {
   0% {
     opacity: 0;

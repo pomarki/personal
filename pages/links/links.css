@@ -13,9 +13,9 @@
   color: var(--black);
 }
 .links__container {
-    display: grid;
-    grid-template-columns: 535px 611px;
-    grid-template-rows: auto auto;
+  display: grid;
+  grid-template-columns: 490px 490px;
+  grid-template-rows: auto auto;
 }
 .links__form-container {
   width: 390px;
@@ -43,7 +43,6 @@
   margin-top: 5px;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
-
 }
 .links__input_type_message {
   height: 150px;
@@ -92,8 +91,27 @@
   padding: 0 0 1px 1px;
 }
 .links__description-container {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  text-align: justify;
 }
 .links__text {
 }
 .links__info {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  align-self: end;
+  
+}
+
+.links__telegram {
+text-decoration: none;
+}
+
+.links__email {
+  margin: 0;
 }

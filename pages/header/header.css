@@ -21,6 +21,7 @@
 
 .header__container {
   min-width: 1280px;
+  background-color: antiquewhite;
   cursor: default;
   display: grid;
   grid-template-columns: max-content 1fr 1fr;

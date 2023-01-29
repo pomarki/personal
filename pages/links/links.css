@@ -13,9 +13,16 @@
   color: var(--black);
 }
 .links__container {
+    display: grid;
+    grid-template-columns: 535px 611px;
+    grid-template-rows: auto auto;
 }
 .links__form-container {
   width: 390px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 .links__form {
   display: flex;

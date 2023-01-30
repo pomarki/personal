@@ -14,13 +14,14 @@ const heaferLinksSlot = document.querySelector(".header__links-slot");
 const headerLinksArr = Array.from(headerLinks);
 const headerBtnsArr = Array.from(headerBtns);
 
-const bookmarkAbout = document.getElementById("boocmark-about");
-
+const bookmarkAboutLabel = document.getElementById("bookmark-about-label");
+const bookmarkAboutLinks = document.getElementById("bookmark-about-links");
+const bookmarkAboutClose = document.getElementById("bookmark-about-close");
 
 const toggleBookmark = () => {
-  bookmarkAbout.classList.add("bookmark_type_close")
-}
-
+  bookmarkAboutLabel.classList.add("bookmark__label_type_close");
+  bookmarkAboutLinks.classList.add("bookmark__links_type_open");
+};
 
 const toggleHeader = () => {
   headerStateBtn.classList.toggle("header__button-state_type_close");
@@ -70,6 +71,8 @@ aboutBtn.addEventListener("click", () => {
   mainContainer.classList.add("start__container_invisible");
 });
 
-bookmarkAbout.addEventListener("click", toggleBookmark);
+bookmarkAboutLabel.addEventListener("click", toggleBookmark);
 
 headerThemeBtn.addEventListener("click", toggleTheme);
+
+bookmarkAboutClose.addEventListener("click", () => {});

@@ -18,9 +18,12 @@ const bookmarkAboutLabel = document.getElementById("bookmark-about-label");
 const bookmarkAboutLinks = document.getElementById("bookmark-about-links");
 const bookmarkAboutClose = document.getElementById("bookmark-about-close");
 
-const toggleBookmark = () => {
-  bookmarkAboutLabel.classList.add("bookmark__label_type_close");
-  bookmarkAboutLinks.classList.add("bookmark__links_type_open");
+const toggleBookmark = (isOpen) => {
+  isOpen
+    ? (bookmarkAboutLabel.classList.add("bookmark__label_type_close"),
+      bookmarkAboutLinks.classList.add("bookmark__links_type_open"))
+    : (bookmarkAboutLabel.classList.remove("bookmark__label_type_close"),
+      bookmarkAboutLinks.classList.remove("bookmark__links_type_open"));
 };
 
 const toggleHeader = () => {
@@ -71,8 +74,12 @@ aboutBtn.addEventListener("click", () => {
   mainContainer.classList.add("start__container_invisible");
 });
 
-bookmarkAboutLabel.addEventListener("click", toggleBookmark);
+bookmarkAboutLabel.addEventListener("click", () => {
+  toggleBookmark(true);
+});
 
 headerThemeBtn.addEventListener("click", toggleTheme);
 
-bookmarkAboutClose.addEventListener("click", () => {});
+bookmarkAboutClose.addEventListener("click", () => {
+  toggleBookmark(false);
+});

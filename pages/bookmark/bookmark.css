@@ -1,5 +1,5 @@
 .bookmark {
-  height: 150px;
+  height: 340px;
   width: 100%;
   grid-column-start: 1;
   grid-column-end: 3;
@@ -13,7 +13,7 @@
 .bookmark__links {
   background-color: var(--orange);
   width: 190px;
-  transform: translateY(150px);
+  transform: translateY(340px);
   transition: all 1s ease;
   display: grid;
   grid-template-columns: 1fr;
@@ -37,6 +37,7 @@
   margin-left: 10px;
   cursor: pointer;
   transition: all 1s ease;
+  align-self: flex-end
 }
 
 .bookmark__label_type_close {
@@ -47,4 +48,8 @@
 .bookmark__links_type_open {
   transform: translateY(0);
   transition: all 1s ease;
+}
+
+.bookmark__label_theme_dark {
+  background: no-repeat url("../../images/bookmark_theme_dark.svg");
 }

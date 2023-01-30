@@ -7,6 +7,8 @@ const headerStateBtn = document.querySelector(".header__button-state");
 const headerThemeBtn = document.querySelector(".header__button_theme");
 const bodyBlock = document.querySelector(".body");
 
+const aboutSection = document.querySelector(".about");
+
 const headerSection = document.querySelector(".header");
 const headerLinks = document.querySelectorAll(".header__link");
 const headerBtns = document.querySelectorAll(".header__button");
@@ -46,6 +48,8 @@ const toggleHeader = () => {
 const toggleTheme = () => {
   bodyBlock.classList.toggle("body_theme_dark");
   headerThemeBtn.classList.toggle("header__button_theme-dark");
+  aboutSection.classList.toggle("about_theme_dark");
+  bookmarkAboutLabel.classList.toggle("bookmark__label_theme_dark");
 };
 
 headerStateBtn.addEventListener("click", toggleHeader);

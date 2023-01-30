@@ -14,11 +14,18 @@ const heaferLinksSlot = document.querySelector(".header__links-slot");
 const headerLinksArr = Array.from(headerLinks);
 const headerBtnsArr = Array.from(headerBtns);
 
+const bookmarkAbout = document.getElementById("boocmark-about");
+
+
+const toggleBookmark = () => {
+  bookmarkAbout.classList.add("bookmark_type_close")
+}
+
+
 const toggleHeader = () => {
   headerStateBtn.classList.toggle("header__button-state_type_close");
   headerSection.classList.toggle("header_type_close");
   heaferLinksSlot.classList.toggle("header_invisible-element");
-
   const blockToggle = (arr, ignore) => {
     arr.forEach((item, index) => {
       if (index === ignore) {
@@ -62,5 +69,7 @@ linksBtn.addEventListener("mouseover", (e) => {
 aboutBtn.addEventListener("click", () => {
   mainContainer.classList.add("start__container_invisible");
 });
+
+bookmarkAbout.addEventListener("click", toggleBookmark);
 
 headerThemeBtn.addEventListener("click", toggleTheme);

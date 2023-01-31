@@ -9,6 +9,15 @@
   flex-wrap: nowrap;
   align-items: flex-end;
   position: relative;
+  /* display: none; */
+}
+
+.bookmark_type_links {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+
+/*   grid-column-start: 2;
+  grid-column-end: 3; */
 }
 
 .bookmark__links {
@@ -58,13 +67,16 @@
 .bookmark__label {
   width: 90px;
   height: 150px;
-  /* background: no-repeat url("../../images/bookmark.svg"); */
   background: no-repeat url("../../images/bookmark-substract.svg");
   margin-left: 10px;
   cursor: pointer;
   transition: transform 1s ease;
   z-index: 1;
-  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+}
+
+.bookmark__label_type_links {
+  margin-left: 0;
+  margin-right: 10px;
 }
 
 .bookmark__back {
@@ -94,8 +106,4 @@
 .bookmark__links_type_open {
   transform: translateY(0);
   transition: transform 1s ease;
-}
-
-.bookmark__label_theme_dark {
-  /* background: no-repeat url("../../images/bookmark_theme_dark.svg"); */
 }

@@ -19,13 +19,16 @@ const headerBtnsArr = Array.from(headerBtns);
 const bookmarkAboutLabel = document.getElementById("bookmark-about-label");
 const bookmarkAboutLinks = document.getElementById("bookmark-about-links");
 const bookmarkAboutClose = document.getElementById("bookmark-about-close");
+const bookmarkAboutBack = document.getElementById("bookmark-about-back");
 
 const toggleBookmark = (isOpen) => {
   isOpen
     ? (bookmarkAboutLabel.classList.add("bookmark__label_type_close"),
-      bookmarkAboutLinks.classList.add("bookmark__links_type_open"))
+      bookmarkAboutLinks.classList.add("bookmark__links_type_open"),
+      bookmarkAboutBack.classList.add("bookmark__back_type_close"))
     : (bookmarkAboutLabel.classList.remove("bookmark__label_type_close"),
-      bookmarkAboutLinks.classList.remove("bookmark__links_type_open"));
+      bookmarkAboutLinks.classList.remove("bookmark__links_type_open"),
+      bookmarkAboutBack.classList.remove("bookmark__back_type_close"));
 };
 
 const toggleHeader = () => {

@@ -19,9 +19,9 @@
   margin-top: 165px;
   display: grid;
   grid-template-columns: 190px 1fr;
-  grid-template-rows: 1fr 1fr minmax(150px, 340px);
+  grid-template-rows: repeat(3, 1fr);
   column-gap: 110px;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .about__text-block {

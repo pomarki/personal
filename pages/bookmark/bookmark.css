@@ -1,5 +1,4 @@
 .bookmark {
-  height: 340px;
   width: 100%;
   grid-column-start: 1;
   grid-column-end: 3;
@@ -7,14 +6,17 @@
   grid-row-end: 4;
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-end;
   
 }
 
 .bookmark__links {
   background-color: var(--orange);
   width: 190px;
-  transform: translateY(340px);
-  transition: all 1s ease;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 1s ease;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 46px repeat(1fr, 3);
@@ -33,21 +35,22 @@
 
 .bookmark__label {
   width: 90px;
+  height: 150px;
   background: no-repeat url("../../images/bookmark.svg");
   margin-left: 10px;
   cursor: pointer;
-  transition: all 1s ease;
-  align-self: flex-end
+  transition: transform 1s ease;
+  
 }
 
 .bookmark__label_type_close {
   transform: translateY(150px);
-  transition: all 1s ease;
+  transition: transform 1s ease;
 }
 
 .bookmark__links_type_open {
   transform: translateY(0);
-  transition: all 1s ease;
+  transition: transform 1s ease;
 }
 
 .bookmark__label_theme_dark {

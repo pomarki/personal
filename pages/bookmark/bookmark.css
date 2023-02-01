@@ -69,6 +69,7 @@
   margin: 10px 10px 0 0;
   cursor: pointer;
   transition: all 1s ease;
+  outline: none;
 }
 
 .bookmark__close_type_links {

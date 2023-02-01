@@ -21,14 +21,32 @@ const bookmarkAboutLinks = document.getElementById("bookmark-about-links");
 const bookmarkAboutClose = document.getElementById("bookmark-about-close");
 const bookmarkAboutBack = document.getElementById("bookmark-about-back");
 
-const toggleBookmark = (isOpen) => {
-  isOpen
-    ? (bookmarkAboutLabel.classList.add("bookmark__label_type_close"),
-      bookmarkAboutLinks.classList.add("bookmark__links_type_open"),
-      bookmarkAboutBack.classList.add("bookmark__back_type_close"))
-    : (bookmarkAboutLabel.classList.remove("bookmark__label_type_close"),
-      bookmarkAboutLinks.classList.remove("bookmark__links_type_open"),
-      bookmarkAboutBack.classList.remove("bookmark__back_type_close"));
+const bookmarkLinksLinks = document.getElementById("bookmark-links-links");
+const bookmarkLinksClose = document.getElementById("bookmark-links-close");
+const bookmarkLinksLabel = document.getElementById("bookmark-links-label");
+const bookmarkLinksBack = document.getElementById("bookmark-links-back");
+
+const toggleBookmark = (isOpen, location) => {
+  console.log(isOpen);
+  if (location === "about") {
+    isOpen
+      ? (bookmarkAboutLabel.classList.add(`bookmark__label_type_close`),
+        bookmarkAboutLinks.classList.add("bookmark__links_type_open"),
+        bookmarkAboutBack.classList.add("bookmark__back_type_close"))
+      : (bookmarkAboutLabel.classList.remove("bookmark__label_type_close"),
+        bookmarkAboutLinks.classList.remove("bookmark__links_type_open"),
+        bookmarkAboutBack.classList.remove("bookmark__back_type_close"));
+  }
+
+  if (location === "links") {
+    isOpen
+      ? (bookmarkLinksLabel.classList.add(`bookmark__label_type_close`),
+        bookmarkLinksLinks.classList.add("bookmark__links_type_open"),
+        bookmarkLinksBack.classList.add("bookmark__back_type_close"))
+      : (bookmarkLinksLabel.classList.remove("bookmark__label_type_close"),
+        bookmarkLinksLinks.classList.remove("bookmark__links_type_open"),
+        bookmarkLinksBack.classList.remove("bookmark__back_type_close"));
+  }
 };
 
 const toggleHeader = () => {
@@ -82,11 +100,19 @@ aboutBtn.addEventListener("click", () => {
 });
 
 bookmarkAboutLabel.addEventListener("click", () => {
-  toggleBookmark(true);
+  toggleBookmark(true, "about");
 });
 
 headerThemeBtn.addEventListener("click", toggleTheme);
 
 bookmarkAboutClose.addEventListener("click", () => {
-  toggleBookmark(false);
+  toggleBookmark(false, "about");
+});
+
+bookmarkLinksLabel.addEventListener("click", () => {
+  toggleBookmark(true, "links");
+})
+
+bookmarkLinksClose.addEventListener("click", () => {
+  toggleBookmark(false, "links");
 });

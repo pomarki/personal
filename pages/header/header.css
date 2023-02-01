@@ -166,6 +166,7 @@
 
 .header__button-state_type_close:hover {
   background: no-repeat url("../../images/close__btn_yellow.svg");
+  
 }
 
 .header__button_lang:hover {

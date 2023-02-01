@@ -27,7 +27,7 @@ const bookmarkLinksLabel = document.getElementById("bookmark-links-label");
 const bookmarkLinksBack = document.getElementById("bookmark-links-back");
 
 const toggleBookmark = (isOpen, location) => {
-  console.log(isOpen);
+  
   if (location === "about") {
     isOpen
       ? (bookmarkAboutLabel.classList.add(`bookmark__label_type_close`),

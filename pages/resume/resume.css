@@ -3,9 +3,9 @@
 .resume__container {
   margin-top: 165px;
   width: 990px;
-  height: 830px;
+  /* height: 830px; */
   display: grid;
-  grid-template-columns: 400px 490px;
+  grid-template-columns: 495px 490px;
   grid-template-rows: 1fr 1fr;
   overflow: hidden;
   color: var(--black);
@@ -13,7 +13,7 @@
 .resume__item {
   filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.25));
   background-color: var(--white);
-   border: 1px solid gray;
+  width: 490px;
 }
 
 .resume__item_type_s {
@@ -53,18 +53,41 @@
   margin: 0;
 }
 
+.resume__line_type_experiens {
+  background-color: var(--red);
+}
+
 .resume__subtitle {
   margin: 0;
 }
 .resume__main {
 }
 .resume__quot {
+  margin-top: 5px;
+  width: 100%;
+  background-color: var(--light-red);
+  box-sizing: border-box;
+  padding: 7px 30px;
 }
+
+.resume__quot-text {
+  margin: 0;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+}
+
 .resume__text {
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: min-content 33px min-content;
-  
+}
+
+.resume__text_type_experiens {
+  grid-template-columns: 440px;
+  grid-template-rows: min-content;
+  margin-top: 5px;
 }
 
 .resume__list {
@@ -77,15 +100,22 @@
 
 .resume__list-item {
   margin-bottom: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .resume__text_skills {
-    background-color: aqua;
-    padding-bottom: 15px;
+  padding-bottom: 15px;
 }
 
 .text__item {
   width: 120px;
+  text-align: justify;
 }
 .resume__footer {
+}
+
+.resume__red {
+  color: var(--red);
 }

@@ -3,7 +3,6 @@
 .resume__container {
   margin-top: 165px;
   width: 990px;
-  /* height: 830px; */
   display: grid;
   grid-template-columns: 495px 490px;
   grid-template-rows: 1fr 1fr;
@@ -14,15 +13,15 @@
   filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.25));
   background-color: var(--white);
   width: 490px;
+  margin-bottom: 20px; /*убрать*/
 }
 
 .resume__item_type_s {
   width: 290px;
-  /* height: 100%; */
   margin-right: 110px;
 }
 
-.resume__title-conteiner {
+.resume__header {
   width: min-content;
   padding: 0 5px 0 5px;
   margin: 10px 0 0 10px;
@@ -39,7 +38,7 @@
   width: 100%;
   height: 3px;
   background-color: var(--orange);
-  margin: 4px 0 15px 0;
+  margin: 4px 0 0 0;
 }
 
 .resume__line_type_l {
@@ -57,10 +56,20 @@
   background-color: var(--red);
 }
 
+.resume__line_type_education {
+  background-color: var(--blue);
+}
+
+.resume__line_type_extra {
+  background-color: var(--green);
+}
+
 .resume__subtitle {
   margin: 0;
 }
 .resume__main {
+  box-sizing: border-box;
+  padding: 15px 20px 15px 30px;
 }
 .resume__quot {
   margin-top: 5px;
@@ -91,7 +100,6 @@
 }
 
 .resume__list {
-  /* width: 242px; */
   display: flex;
   flex-direction: column;
   margin: 0 0 0 30px;

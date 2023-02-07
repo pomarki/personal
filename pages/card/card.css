@@ -3,11 +3,15 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: min-content 33px min-content;
-  /* background-color: tomato; */
+}
+
+.card_resume {
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content min-content;
 }
 
 .card__line {
-  width: 100%;
+  width: 180px;
   height: 3px;
   background-color: var(--orange);
   margin: 15px 0 15px 0;
@@ -15,6 +19,38 @@
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
+  justify-self: center;
+}
+
+.card__block {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__subtitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0 0 5px 30px;
+}
+.card__subtite_main {
+  font-style: italic;
+  font-size: 12px;
+  width: 230px;
+}
+
+.card__subtite_main:first-letter {
+  color: var(--red);
+}
+
+.card__quote {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 7px 30px;
+  margin: 0;
+  background-color: var(--light-blue);
 }
 
 .card__list {
@@ -22,18 +58,15 @@
   margin: 0;
 }
 .card__list-item {
-    list-style: none;
+  list-style: none;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
+  margin-bottom: 4px;
 }
 
-/* .card__list-item::marker {
-  color: var(--orange);
-} */
-
 .card__list-item::before {
-    content: "•";
-    color: var(--orange);
-    padding-right: 5px;
+  content: "•";
+  color: var(--orange);
+  padding-right: 5px;
 }

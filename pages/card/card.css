@@ -2,12 +2,14 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: min-content 33px min-content;
+  grid-template-rows: min-content;
+  grid-auto-flow: row;
 }
 
-.card_resume {
+.card_container {
   grid-template-columns: 1fr;
-  grid-template-rows: min-content min-content;
+  grid-template-rows: 1fr;
+  grid-auto-flow: row;
 }
 
 .card__line {
@@ -20,6 +22,10 @@
   grid-row-start: 2;
   grid-row-end: 3;
   justify-self: center;
+}
+
+.card__red-letter {
+  color: var(--red);
 }
 
 .card__block {
@@ -40,8 +46,10 @@
   width: 230px;
 }
 
-.card__subtite_main:first-letter {
-  color: var(--red);
+.card__subtite_extra {
+  font-style: italic;
+  font-weight: 500;
+  margin: 0 0 20px 0;
 }
 
 .card__quote {
@@ -53,12 +61,16 @@
   background-color: var(--light-blue);
 }
 
+.card__quote_experiens {
+  background-color: var(--light-red);
+}
+
 .card__list {
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 .card__list-item {
-  list-style: none;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -69,4 +81,21 @@
   content: "•";
   color: var(--orange);
   padding-right: 5px;
+}
+
+.card__list-item_extra {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.card__text {
+  width: 440px;
+  text-align: justify;
+  margin: 0 0 5px 30px;
+}
+
+.card__text_light {
+  font-weight: 200;
 }

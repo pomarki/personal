@@ -1,0 +1,68 @@
+.start {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Source Code Pro", "Arial", "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  color: white;
+}
+
+.start__container {
+  width: 394px;
+  height: 394px;
+  
+  position: relative;
+  transition: all 0.8s ease;
+}
+
+.start__text {
+  cursor: pointer;
+  margin: 0;
+  transition: all 0.8s ease;
+  text-transform: uppercase;
+}
+
+.start__link {
+  position: absolute;
+  cursor: pointer;
+  width: 197px;
+  height: 197px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.9s ease;
+}
+
+.start__link_about {
+  background-color: #EF476F;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.start__link_resume {
+  background-color: #FFD166;
+  left: 197px;
+  top: 0;
+  z-index: 2;
+}
+
+.start__link_works {
+  background-color: #06D6A0;
+  left: 0;
+  top: 197px;
+  z-index: 3;
+}
+
+.start__link_links {
+  background-color: #118AB2;
+  justify-self: end;
+  left: 197px;
+  top: 197px;
+  z-index: 4;
+}

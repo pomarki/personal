@@ -15,9 +15,10 @@
 .start__container {
   width: 394px;
   height: 394px;
-  
+  background: url("../../images/back.svg");
   position: relative;
   transition: all 0.8s ease;
+  overflow: hidden;
 }
 
 .start__text {
@@ -40,7 +41,7 @@
 
 .start__link_about {
   background-color: #EF476F;
-  left: 0;
+  left: 394px;
   top: 0;
   z-index: 1;
 }
@@ -48,21 +49,25 @@
 .start__link_resume {
   background-color: #FFD166;
   left: 197px;
-  top: 0;
+  top: 394px;
   z-index: 2;
 }
 
 .start__link_works {
   background-color: #06D6A0;
-  left: 0;
-  top: 197px;
+  left: 0px;
+  top: -197px;
   z-index: 3;
 }
 
 .start__link_links {
   background-color: #118AB2;
   justify-self: end;
-  left: 197px;
+  left: -197px;
   top: 197px;
   z-index: 4;
+}
+
+.start__new {
+  opacity: .5;
 }

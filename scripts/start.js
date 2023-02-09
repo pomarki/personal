@@ -1,31 +1,73 @@
-const aboutButton = document.querySelector(".start__link_about");
-const resumeButton = document.querySelector(".start__link_resume");
-const worksButton = document.querySelector(".start__link_works");
-const linksButton = document.querySelector(".start__link_links");
+import { StartCard } from "./StartCard.js";
 
-const aboutText = aboutButton.querySelector(".start__text");
-const resumeText = resumeButton.querySelector(".start__text");
-const worksText = worksButton.querySelector(".start__text");
-const linksText = linksButton.querySelector(".start__text");
+const startArr = [
+  {
+    template: "start-card",
+    title: "обо\u00A0мне",
+    class: "start__link_about",
+    extraClass: "",
+    id: 1,
+    method: changeCard,
+  },
+  {
+    template: "start-card",
+    title: "резюме",
+    class: "start__link_resume",
+    extraClass: "",
+    id: 2,
+    method: changeCard,
+  },
+  {
+    template: "start-card",
+    title: "работы",
+    class: "start__link_works",
+    extraClass: "",
+    id: 3,
+    method: changeCard,
+  },
+  {
+    template: "start-card",
+    title: "связь",
+    class: "start__link_links",
+    extraClass: "",
+    id: 4,
+    method: changeCard,
+  },
+];
 
-// ширина карточек
+const startContainer = document.querySelector(".start__container");
 
-const sizeS = 65;
-const sizeL = 132;
-const sizeXL = 394;
-const size = 197;
+startArr.forEach((item) => {
+  const card = new StartCard(item);
+  const cardElement = card.generateCard();
+  startContainer.append(cardElement);
+});
 
-// координаты
-const coordS = 65;
-const coordL = 197;
-const coordZero = 0;
+function startInition() {
+  const sizeS = 65;
+  const sizeL = 132;
+  const sizeXL = 394;
+  const size = 197;
 
-const startX = 0;
-const startY = 0;
-const startXN = 197;
-const startYN = 197;
+  // координаты
+  const coordS = 65;
+  const coordL = 197;
+  const coordZero = 0;
 
-const reset = () => {
+  const startX = 0;
+  const startY = 0;
+  const startXN = 197;
+  const startYN = 197;
+  const aboutButton = startContainer.querySelector(".start__link_about");
+  const resumeButton = startContainer.querySelector(".start__link_resume");
+  const worksButton = startContainer.querySelector(".start__link_works");
+  const linksButton = startContainer.querySelector(".start__link_links");
+
+  const aboutText = aboutButton.querySelector(".start__text");
+  const resumeText = resumeButton.querySelector(".start__text");
+  const worksText = worksButton.querySelector(".start__text");
+  const linksText = linksButton.querySelector(".start__text");
+
   aboutButton.style.width = size + "px";
   resumeButton.style.width = size + "px";
   worksButton.style.width = size + "px";
@@ -45,66 +87,16 @@ const reset = () => {
   resumeText.style.transform = "rotate(0deg)";
   worksText.style.transform = "rotate(0deg)";
   linksText.style.transform = "rotate(0deg)";
-};
+}
 
-const aboutTransform = () => {
-  aboutButton.style.width = sizeXL + "px";
-  resumeButton.style.top = coordL + "px";
-  resumeButton.style.left = sizeS + sizeL + "px";
-  worksButton.style.width = sizeS + "px";
-  worksButton.style.top = size + "px";
-  worksText.style.transform = "rotate(-90deg)";
-  linksButton.style.left = coordS + "px";
-  linksButton.style.top = coordL + "px";
-  linksButton.style.width = sizeL + "px";
-  linksText.style.transform = "rotate(-90deg)";
-};
+function changeCard(id) {
+  startArr.forEach((item) => {
+    if(item.id != id) {
+      document.querySelector(`.${item.class}`).classList.add("start__new")
+    } else {return}
+  })
+  
 
-const resumeTransform = () => {
-  aboutButton.style.width = "65px";
-  aboutButton.style.top = "197px";
-  aboutText.style.transform = "rotate(-90deg)";
-  resumeButton.style.left = "0";
-  resumeButton.style.width = "394px";
-  worksButton.style.width = "132px";
-  worksButton.style.left = "65px";
-  worksText.style.transform = "rotate(-90deg)";
-};
+}
 
-const worksTransform = () => {
-  worksButton.style.width = "394px";
-  aboutButton.style.width = "65px";
-  aboutText.style.transform = "rotate(-90deg)";
-  resumeButton.style.left = "65px";
-  resumeButton.style.width = "132px";
-  resumeText.style.transform = "rotate(-90deg)";
-  linksButton.style.top = "0";
-};
-
-const linksTransform = () => {
-  linksButton.style.width = "394px";
-  linksButton.style.left = "0";
-  worksButton.style.top = "0";
-  aboutButton.style.width = "132px";
-  aboutButton.style.left = "197px";
-  aboutText.style.transform = "rotate(-90deg)";
-  resumeButton.style.left = "329px";
-  resumeButton.style.width = "65px";
-  resumeText.style.transform = "rotate(-90deg)";
-};
-
-aboutButton.addEventListener("mouseover", aboutTransform);
-
-aboutButton.addEventListener("mouseleave", reset);
-
-resumeButton.addEventListener("mouseover", resumeTransform);
-
-resumeButton.addEventListener("mouseleave", reset);
-
-worksButton.addEventListener("mouseover", worksTransform);
-
-worksButton.addEventListener("mouseleave", reset);
-
-linksButton.addEventListener("mouseover", linksTransform);
-
-linksButton.addEventListener("mouseleave", reset);
+setTimeout(startInition, 1000);

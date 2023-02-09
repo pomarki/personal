@@ -5,6 +5,7 @@ class StartCard {
     this._class = options.class;
     this._extraClass = options.extraClass;
     this._method = options.method;
+    this._close = options.close;
     this._id = options.id;
   }
 
@@ -46,6 +47,12 @@ class StartCard {
       .querySelector(".start__link")
       .addEventListener("mouseenter", () => {
         this._method(this._id);
+      });
+
+      this._startCard
+      .querySelector(".start__link")
+      .addEventListener("mouseleave", () => {
+        this._close();
       });
   }
 }

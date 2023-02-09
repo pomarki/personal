@@ -1,5 +1,5 @@
 import { StartCard } from "./StartCard.js";
-import { morfingConst } from "./data.js";
+import { morfingConst, initialConst } from "./data.js";
 
 const startArr = [
   {
@@ -9,6 +9,7 @@ const startArr = [
     extraClass: "",
     id: 0,
     method: changeCard,
+    close: resetCards,
   },
   {
     template: "start-card",
@@ -17,6 +18,7 @@ const startArr = [
     extraClass: "",
     id: 1,
     method: changeCard,
+    close: resetCards,
   },
   {
     template: "start-card",
@@ -25,6 +27,7 @@ const startArr = [
     extraClass: "",
     id: 2,
     method: changeCard,
+    close: resetCards,
   },
   {
     template: "start-card",
@@ -33,6 +36,7 @@ const startArr = [
     extraClass: "",
     id: 3,
     method: changeCard,
+    close: resetCards,
   },
 ];
 
@@ -43,6 +47,15 @@ startArr.forEach((item) => {
   const cardElement = card.generateCard();
   startContainer.append(cardElement);
 });
+
+function resetCards() {
+  getStartCardsArr(startArr).forEach((item, index) => {
+    item.style.width = initialConst[index].width;
+    item.style.top = initialConst[index].top;
+    item.style.left = initialConst[index].left;
+    item.querySelector(".start__text").style.rotate = initialConst[index].rotate;
+  })
+}
 
 function reset() {
   const sizeS = 65;
@@ -93,11 +106,7 @@ function reset() {
 function changeCard(id) {
   let optionArr = getMorfingArr(id);
 
-  let cardsArr = startArr.map((item) => {
-    return startContainer.querySelector(`.${item.class}`);
-  });
-
-  cardsArr.forEach((item, index) => {
+  getStartCardsArr(startArr).forEach((item, index) => {
     item.style.width = optionArr[index].width;
     item.style.top = optionArr[index].top;
     item.style.left = optionArr[index].left;
@@ -109,4 +118,10 @@ function getMorfingArr(id) {
   return morfingConst[id];
 }
 
-setTimeout(reset, 1000);
+function getStartCardsArr(arr) {
+  return arr.map((item) => {
+    return startContainer.querySelector(`.${item.class}`);
+  });
+}
+
+setTimeout(resetCards, 1000);

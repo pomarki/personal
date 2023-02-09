@@ -50,72 +50,27 @@ startArr.forEach((item) => {
 
 function resetCards() {
   getStartCardsArr(startArr).forEach((item, index) => {
-    item.style.width = initialConst[index].width;
-    item.style.top = initialConst[index].top;
-    item.style.left = initialConst[index].left;
-    item.querySelector(".start__text").style.rotate = initialConst[index].rotate;
-  })
-}
-
-function reset() {
-  const sizeS = 65;
-  const sizeL = 132;
-  const sizeXL = 394;
-  const size = 197;
-
-  // координаты
-  const coordS = 65;
-  const coordL = 197;
-  const coordZero = 0;
-
-  const startX = 0;
-  const startY = 0;
-  const startXN = 197;
-  const startYN = 197;
-  const aboutButton = startContainer.querySelector(".start__link_about");
-  const resumeButton = startContainer.querySelector(".start__link_resume");
-  const worksButton = startContainer.querySelector(".start__link_works");
-  const linksButton = startContainer.querySelector(".start__link_links");
-
-  const aboutText = aboutButton.querySelector(".start__text");
-  const resumeText = resumeButton.querySelector(".start__text");
-  const worksText = worksButton.querySelector(".start__text");
-  const linksText = linksButton.querySelector(".start__text");
-
-  aboutButton.style.width = size + "px";
-  resumeButton.style.width = size + "px";
-  worksButton.style.width = size + "px";
-  linksButton.style.width = size + "px";
-
-  aboutButton.style.top = startY + "px";
-  resumeButton.style.top = startY + "px";
-  worksButton.style.top = startYN + "px";
-  linksButton.style.top = startYN + "px";
-
-  aboutButton.style.left = startX + "px";
-  resumeButton.style.left = startYN + "px";
-  worksButton.style.left = startX + "px";
-  linksButton.style.left = startYN + "px";
-
-  aboutText.style.transform = "rotate(0deg)";
-  resumeText.style.transform = "rotate(0deg)";
-  worksText.style.transform = "rotate(0deg)";
-  linksText.style.transform = "rotate(0deg)";
+    morfingCard(item, initialConst, index, ".start__text");
+  });
 }
 
 function changeCard(id) {
   let optionArr = getMorfingArr(id);
 
   getStartCardsArr(startArr).forEach((item, index) => {
-    item.style.width = optionArr[index].width;
-    item.style.top = optionArr[index].top;
-    item.style.left = optionArr[index].left;
-    item.querySelector(".start__text").style.rotate = optionArr[index].rotate;
+    morfingCard(item, optionArr, index, ".start__text");
   });
 }
 
 function getMorfingArr(id) {
   return morfingConst[id];
+}
+
+function morfingCard(item, arr, index, titleClass) {
+  item.style.width = arr[index].width;
+  item.style.top = arr[index].top;
+  item.style.left = arr[index].left;
+  item.querySelector(titleClass).style.rotate = arr[index].rotate;
 }
 
 function getStartCardsArr(arr) {

@@ -44,7 +44,7 @@ class StartCard {
     }); */
     this._startCard
       .querySelector(".start__link")
-      .addEventListener("mouseover", () => {
+      .addEventListener("mouseenter", () => {
         this._method(this._id);
       });
   }

@@ -1,4 +1,5 @@
 import { StartCard } from "./StartCard.js";
+import { morfingConst } from "./data.js";
 
 const startArr = [
   {
@@ -6,7 +7,7 @@ const startArr = [
     title: "обо\u00A0мне",
     class: "start__link_about",
     extraClass: "",
-    id: 1,
+    id: 0,
     method: changeCard,
   },
   {
@@ -14,7 +15,7 @@ const startArr = [
     title: "резюме",
     class: "start__link_resume",
     extraClass: "",
-    id: 2,
+    id: 1,
     method: changeCard,
   },
   {
@@ -22,7 +23,7 @@ const startArr = [
     title: "работы",
     class: "start__link_works",
     extraClass: "",
-    id: 3,
+    id: 2,
     method: changeCard,
   },
   {
@@ -30,7 +31,7 @@ const startArr = [
     title: "связь",
     class: "start__link_links",
     extraClass: "",
-    id: 4,
+    id: 3,
     method: changeCard,
   },
 ];
@@ -43,7 +44,7 @@ startArr.forEach((item) => {
   startContainer.append(cardElement);
 });
 
-function startInition() {
+function reset() {
   const sizeS = 65;
   const sizeL = 132;
   const sizeXL = 394;
@@ -90,13 +91,22 @@ function startInition() {
 }
 
 function changeCard(id) {
-  startArr.forEach((item) => {
-    if(item.id != id) {
-      document.querySelector(`.${item.class}`).classList.add("start__new")
-    } else {return}
-  })
-  
+  let optionArr = getMorfingArr(id);
 
+  let cardsArr = startArr.map((item) => {
+    return startContainer.querySelector(`.${item.class}`);
+  });
+
+  cardsArr.forEach((item, index) => {
+    item.style.width = optionArr[index].width;
+    item.style.top = optionArr[index].top;
+    item.style.left = optionArr[index].left;
+    item.querySelector(".start__text").style.rotate = optionArr[index].rotate;
+  });
 }
 
-setTimeout(startInition, 1000);
+function getMorfingArr(id) {
+  return morfingConst[id];
+}
+
+setTimeout(reset, 1000);

@@ -1,5 +1,6 @@
 import { StartCard } from "./StartCard.js";
-import { startArr, resetCards, startContainer } from "./data.js";
+import { startArr, startContainer } from "./data.js";
+import { resetCards } from "./utilities.js";
 
 startArr.forEach((item) => {
   const card = new StartCard(item);

@@ -1,33 +1,28 @@
-const mainContainer = document.querySelector(".start__container");
-const aboutBtn = document.querySelector(".start__link_about");
-const worksBtn = document.querySelector(".start__link_works");
-const resumeBtn = document.querySelector(".start__link_resume");
-const linksBtn = document.querySelector(".start__link_links");
-const headerStateBtn = document.querySelector(".header__button-state");
-const headerThemeBtn = document.querySelector(".header__button_theme");
-const bodyBlock = document.querySelector(".body");
-
-const aboutSection = document.querySelector(".about");
-
-const headerSection = document.querySelector(".header");
-const headerLinks = document.querySelectorAll(".header__link");
-const headerBtns = document.querySelectorAll(".header__button");
-const heaferLinksSlot = document.querySelector(".header__links-slot");
-const headerLinksArr = Array.from(headerLinks);
-const headerBtnsArr = Array.from(headerBtns);
-
-const bookmarkAboutLabel = document.getElementById("bookmark-about-label");
-const bookmarkAboutLinks = document.getElementById("bookmark-about-links");
-const bookmarkAboutClose = document.getElementById("bookmark-about-close");
-const bookmarkAboutBack = document.getElementById("bookmark-about-back");
-
-const bookmarkLinksLinks = document.getElementById("bookmark-links-links");
-const bookmarkLinksClose = document.getElementById("bookmark-links-close");
-const bookmarkLinksLabel = document.getElementById("bookmark-links-label");
-const bookmarkLinksBack = document.getElementById("bookmark-links-back");
+import { StartCard } from "./StartCard.js";
+import { startArr, startContainer } from "./data.js";
+import { resetCards } from "./utilities.js";
+import {
+  aboutSection,
+  bodyBlock,
+  bookmarkAboutLabel,
+  bookmarkAboutLinks,
+  bookmarkAboutClose,
+  bookmarkAboutBack,
+  bookmarkLinksLinks,
+  bookmarkLinksClose,
+  bookmarkLinksLabel,
+  bookmarkLinksBack,
+  headerBtns,
+  headerLinks,
+  headerSection,
+  headerBtnsArr,
+  headerLinksArr,
+  headerStateBtn,
+  headerThemeBtn,
+  heaferLinksSlot,
+} from "./constants.js";
 
 const toggleBookmark = (isOpen, location) => {
-  
   if (location === "about") {
     isOpen
       ? (bookmarkAboutLabel.classList.add(`bookmark__label_type_close`),
@@ -73,31 +68,15 @@ const toggleTheme = () => {
   bookmarkAboutLabel.classList.toggle("bookmark__label_theme_dark");
 };
 
+startArr.forEach((item) => {
+  const card = new StartCard(item);
+  const cardElement = card.generateCard();
+  startContainer.append(cardElement);
+});
+
+setTimeout(resetCards, 1000);
+
 headerStateBtn.addEventListener("click", toggleHeader);
-
-aboutBtn.addEventListener("mouseover", (e) => {
-  mainContainer.classList = "start__container";
-  mainContainer.classList.add("start__container_red");
-});
-
-worksBtn.addEventListener("mouseover", (e) => {
-  mainContainer.classList = "start__container";
-  mainContainer.classList.add("start__container_green");
-});
-
-resumeBtn.addEventListener("mouseover", (e) => {
-  mainContainer.classList = "start__container";
-  mainContainer.classList.add("start__container_orange");
-});
-
-linksBtn.addEventListener("mouseover", (e) => {
-  mainContainer.classList = "start__container";
-  mainContainer.classList.add("start__container_blue");
-});
-
-aboutBtn.addEventListener("click", () => {
-  mainContainer.classList.add("start__container_invisible");
-});
 
 bookmarkAboutLabel.addEventListener("click", () => {
   toggleBookmark(true, "about");
@@ -111,7 +90,7 @@ bookmarkAboutClose.addEventListener("click", () => {
 
 bookmarkLinksLabel.addEventListener("click", () => {
   toggleBookmark(true, "links");
-})
+});
 
 bookmarkLinksClose.addEventListener("click", () => {
   toggleBookmark(false, "links");

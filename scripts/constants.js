@@ -20,6 +20,7 @@ const bookmarkLinksLinks = document.getElementById("bookmark-links-links");
 const bookmarkLinksClose = document.getElementById("bookmark-links-close");
 const bookmarkLinksLabel = document.getElementById("bookmark-links-label");
 const bookmarkLinksBack = document.getElementById("bookmark-links-back");
+const startContainer = document.querySelector(".start__container ");
 
 export {
   aboutSection,
@@ -40,4 +41,5 @@ export {
   headerStateBtn,
   headerThemeBtn,
   heaferLinksSlot,
+  startContainer,
 };

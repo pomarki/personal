@@ -6,6 +6,7 @@ import {
   startArr,
   headerOptions,
 } from "./data.js";
+
 import { Header } from "../components/Header.js";
 
 function changeCard(id) {
@@ -43,6 +44,8 @@ function openHeader(id) {
   startContainer.remove();
   const header = new Header(headerOptions[id]);
   const headerEl = header.generateHeader();
+  headerContainer.classList.add("header_visible");
+  headerContainer.classList.add(`header_${headerOptions[id].headerType}`);
   headerContainer.append(headerEl);
 }
 

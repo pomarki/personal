@@ -81,12 +81,6 @@ startArr.forEach((item) => {
   startContainer.append(cardElement);
 });
 
-/* function openHeader(id) {
-  startContainer.remove();
-  const header = new Header(headerOptions[id]);
-  const headerEl = header.generateHeader();
-  headerContainer.append(headerEl);
-} */
 
 setTimeout(resetCards, 1000);
 

@@ -8,8 +8,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
- /*   display: none; */
+  display: none;
   flex-direction: row;
   justify-content: center;
   z-index: 1;
@@ -19,7 +18,28 @@
   height: 110px;
 }
 
+.header_visible {
+  display: flex;
+}
+
+.header_about {
+  background-color: var(--red);
+}
+
+.header_resume {
+  background-color: var(--orange);
+}
+
+.header_works {
+  background-color: var(--green);
+}
+
+.header_links {
+  background-color: var(--blue);
+}
+
 .header__container {
+  
   min-width: 990px;
   cursor: default;
   display: grid;
@@ -93,7 +113,7 @@
   min-width: 50px;
   border: 0;
   cursor: pointer;
-  background-color: var(--red);
+  /* background-color: var(--red); */
   padding: 0;
 }
 
@@ -101,7 +121,7 @@
   width: 50px;
   height: 10px;
   margin-right: 5px;
-  background-image: url("../../images/open__btn.svg");
+  background: no-repeat url("../../images/open__btn.svg");
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 1;
@@ -166,7 +186,6 @@
 
 .header__button-state_type_close:hover {
   background: no-repeat url("../../images/close__btn_yellow.svg");
-  
 }
 
 .header__button_lang:hover {

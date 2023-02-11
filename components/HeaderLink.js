@@ -21,3 +21,5 @@ class HeaderLink {
 }
 
 export { HeaderLink };
+
+//tabindex не фурычит

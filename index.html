@@ -12,42 +12,7 @@
     </head>
     <body class="body">
       <div class="wrapper">
-        <header class="header header_type_close">
-          <div class="header__container header__container_type_close">
-            <div class="header__title-slot">
-              <h1 class="header__title-text">главная</h1>
-              <p class="header__title-text">&nbsp;/&nbsp;</p>
-              <p class="header__title-text header__title_about">обо мне</p>
-            </div>
-            <nav class="header__links-slot header_invisible-element">
-              <a tabindex="2" class="header__link header_invisible-element"
-                >резюме</a
-              >
-              <a tabindex="3" class="header__link header_invisible-element"
-                >работы</a
-              >
-              <a tabindex="4" class="header__link header_invisible-element"
-                >связь</a
-              >
-            </nav>
-            <button
-              tabindex="5"
-              class="header__button header__button-state"
-            ></button>
-            <div class="header__buttons-slot">
-              <button
-                tabindex="6"
-                class="header__button header__button_lang header_invisible-element"
-              >
-                EN
-              </button>
-              <button
-                tabindex="7"
-                class="header__button header__button_theme header_invisible-element"
-              ></button>
-            </div>
-          </div>
-        </header>
+        <header class="header"></header>
         <main class="main">
           <section class="start">
             <div class="start__container"></div>
@@ -209,13 +174,16 @@
                     <p class="card__subtitle card__subtite_extra">Курсы:</p>
                     <ul class="card__list">
                       <li class="card__list-item card__list-item_extra">
-                        “Секреты JS ниндзя” / <span class="card__text_light">Джон Резинг</span>
+                        “Секреты JS ниндзя” /
+                        <span class="card__text_light">Джон Резинг</span>
                       </li>
                       <li class="card__list-item card__list-item_extra">
-                        “JS шаблоны” / <span class="card__text_light">Стоян Стефанов</span>
+                        “JS шаблоны” /
+                        <span class="card__text_light">Стоян Стефанов</span>
                       </li>
                       <li class="card__list-item card__list-item_extra">
-                        “Функциональное программирование на JS” / <span class="card__text_light">Луис Атенсио</span>
+                        “Функциональное программирование на JS” /
+                        <span class="card__text_light">Луис Атенсио</span>
                       </li>
                     </ul>
                     <ul class="card__list">
@@ -232,7 +200,9 @@
                   <button
                     class="resume__footer-button resume__footer-button_back resume__footer-button_back-green"
                   ></button>
-                  <button class="resume__footer-button resume__footer-button_green"></button>
+                  <button
+                    class="resume__footer-button resume__footer-button_green"
+                  ></button>
                 </div>
               </div>
             </div>
@@ -396,6 +366,33 @@
         <div class="start__link">
           <p class="start__text"></p>
         </div>
+      </template>
+      <template id="header">
+        <div class="header__container">
+          <div class="header__title-slot">
+            <h1 class="header__title-text"></h1>
+            <p class="header__title-text">&nbsp;/&nbsp;</p>
+            <p class="header__title-text header__current-title"></p>
+          </div>
+          <nav class="header__links-slot"></nav>
+          <button
+            tabindex="5"
+            class="header__button header__button-state"
+          ></button>
+          <div class="header__buttons-slot">
+            <button
+              tabindex="6"
+              class="header__button header__button_lang"
+            ></button>
+            <button
+              tabindex="7"
+              class="header__button header__button_theme"
+            ></button>
+          </div>
+        </div>
+      </template>
+      <template id="header-link">
+        <a tabindex="" class="header__link"></a>
       </template>
     </body>
   </html>

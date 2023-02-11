@@ -12,7 +12,6 @@ class StartCard {
     const cardElement = document
       .getElementById(this._cardContainer)
       .content.cloneNode(true);
-
     return cardElement;
   }
 

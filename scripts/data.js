@@ -81,6 +81,19 @@ const startArr = [
 ];
 
 const startContainer = document.querySelector(".start__container");
+const headerContainer = document.querySelector(".header");
+
+const headerOptions = {
+  headerType: "about",
+  mainTitleRu: "главная",
+  mainTitleEn: "main",
+  currentTitleRu: "обо\u00A0мне",
+  linksRu: ["резюме", "работы", "связь"],
+  linksEn: ["resume", "works", "links"],
+  stateOpen: false,
+  headerClass: "header",
+  languageBtn: "EN",
+};
 
 
-export { morfingConst, initialConst, startArr, startContainer };
+export { morfingConst, initialConst, startArr, startContainer, headerContainer, headerOptions };

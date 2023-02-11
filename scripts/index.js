@@ -1,5 +1,6 @@
 import { StartCard } from "./StartCard.js";
-import { startArr, startContainer } from "./data.js";
+import { Header } from "../components/Header.js";
+import { startArr, startContainer, headerContainer, headerOptions } from "./data.js";
 import { resetCards } from "./utilities.js";
 import {
   aboutSection,
@@ -44,7 +45,7 @@ const toggleBookmark = (isOpen, location) => {
   }
 };
 
-const toggleHeader = () => {
+/* const toggleHeader = () => {
   headerStateBtn.classList.toggle("header__button-state_type_close");
   headerSection.classList.toggle("header_type_close");
   heaferLinksSlot.classList.toggle("header_invisible-element");
@@ -59,30 +60,38 @@ const toggleHeader = () => {
   };
   blockToggle(headerLinksArr);
   blockToggle(headerBtnsArr, 0);
-};
+}; */
 
-const toggleTheme = () => {
+/* const toggleTheme = () => {
   bodyBlock.classList.toggle("body_theme_dark");
   headerThemeBtn.classList.toggle("header__button_theme-dark");
   aboutSection.classList.toggle("about_theme_dark");
   bookmarkAboutLabel.classList.toggle("bookmark__label_theme_dark");
 };
-
+ */
 startArr.forEach((item) => {
   const card = new StartCard(item);
   const cardElement = card.generateCard();
   startContainer.append(cardElement);
 });
 
+
+const header = new Header(headerOptions);
+
+const headerEl = header.generateHeader()
+headerContainer.append(headerEl)
+
+console.log(headerEl)
+
 setTimeout(resetCards, 1000);
 
-headerStateBtn.addEventListener("click", toggleHeader);
+/* headerStateBtn.addEventListener("click", toggleHeader); */
 
 bookmarkAboutLabel.addEventListener("click", () => {
   toggleBookmark(true, "about");
 });
 
-headerThemeBtn.addEventListener("click", toggleTheme);
+/* headerThemeBtn.addEventListener("click", toggleTheme); */
 
 bookmarkAboutClose.addEventListener("click", () => {
   toggleBookmark(false, "about");

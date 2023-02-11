@@ -26,6 +26,7 @@ class StartCard {
 
   _setEventListeners() {
     const card = this._startCard.querySelector(".start__link");
+
     card.addEventListener("mouseenter", () => {
       this._method(this._id);
     });

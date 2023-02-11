@@ -38,6 +38,10 @@
   background-color: var(--blue);
 }
 
+.header__main-title {
+  cursor: pointer;
+}
+
 .header__container {
   
   min-width: 990px;
@@ -176,7 +180,7 @@
   border-radius: 5px;
 }
 
-.header__button_theme:hover {
+/* .header__button_theme:hover {
   background: no-repeat url("../../images/theme__btn_yellow.svg");
 }
 
@@ -190,7 +194,7 @@
 
 .header__button_lang:hover {
   color: var(--orange);
-}
+} */
 
 .header__button_theme-dark {
   transform: rotate(180deg);

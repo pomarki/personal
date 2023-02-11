@@ -1,5 +1,5 @@
 import { changeCard, resetCards, openHeader } from "./utilities.js";
-
+import { renderStartPage } from "../renders/renders.js";
 const cV = {
   z: "0px",
   s: "65px",
@@ -98,6 +98,7 @@ const headerOptions = [
     stateOpen: false,
     headerClass: "header",
     languageBtn: "EN",
+    gotoMain: renderStartPage,
   },
   {
     headerType: "resume",
@@ -109,6 +110,7 @@ const headerOptions = [
     stateOpen: false,
     headerClass: "header",
     languageBtn: "EN",
+    gotoMain: renderStartPage,
   },
   {
     headerType: "works",
@@ -120,6 +122,7 @@ const headerOptions = [
     stateOpen: false,
     headerClass: "header",
     languageBtn: "EN",
+    gotoMain: renderStartPage,
   },
   {
     headerType: "links",
@@ -131,6 +134,7 @@ const headerOptions = [
     stateOpen: false,
     headerClass: "header",
     languageBtn: "EN",
+    gotoMain: renderStartPage,
   },
 ];
 

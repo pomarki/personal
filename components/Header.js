@@ -12,6 +12,7 @@ class Header {
     this._stateOpen = options.stateOpen;
     this._headerClass = options.headerClass;
     this._languageBtn = options.languageBtn;
+    this._gotoMain = options.gotoMain;
   }
 
   _getTemplate() {
@@ -33,7 +34,13 @@ class Header {
       const linkElement = link.generateLink();
       conteiner.append(linkElement);
     });
+    this._setEventListeners();
     return this._header;
+  }
+
+  _setEventListeners() {
+    const mainLink = this._header.querySelector(".header__main-title");
+    mainLink.addEventListener("click", () => {this._gotoMain()});
   }
 }
 

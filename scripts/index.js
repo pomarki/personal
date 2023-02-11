@@ -7,6 +7,9 @@ import {
   headerOptions,
 } from "./data.js";
 import { resetCards, openHeader } from "./utilities.js";
+
+import { renderStartPage } from "../renders/renders.js";
+
 import {
   aboutSection,
   bodyBlock,
@@ -74,15 +77,12 @@ const toggleBookmark = (isOpen, location) => {
   bookmarkAboutLabel.classList.toggle("bookmark__label_theme_dark");
 };
  */
-startArr.forEach((item) => {
-  const card = new StartCard(item);
-  const cardElement = card.generateCard();
-  
-  startContainer.append(cardElement);
-});
 
 
-setTimeout(resetCards, 1000);
+
+
+
+renderStartPage()
 
 /* headerStateBtn.addEventListener("click", toggleHeader); */
 
@@ -103,5 +103,3 @@ bookmarkLinksLabel.addEventListener("click", () => {
 bookmarkLinksClose.addEventListener("click", () => {
   toggleBookmark(false, "links");
 });
-
-

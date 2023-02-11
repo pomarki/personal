@@ -1,4 +1,12 @@
-import { startContainer, initialConst, morfingConst, startArr } from "./data.js";
+import {
+  startContainer,
+  headerContainer,
+  initialConst,
+  morfingConst,
+  startArr,
+  headerOptions,
+} from "./data.js";
+import { Header } from "../components/Header.js";
 
 function changeCard(id) {
   let optionArr = getMorfingArr(id);
@@ -31,4 +39,11 @@ function morfingCard(item, arr, index, titleClass) {
   item.querySelector(titleClass).style.rotate = arr[index].rotate;
 }
 
-export { changeCard, resetCards };
+function openHeader(id) {
+  startContainer.remove();
+  const header = new Header(headerOptions[id]);
+  const headerEl = header.generateHeader();
+  headerContainer.append(headerEl);
+}
+
+export { changeCard, resetCards, openHeader };

@@ -1,4 +1,4 @@
-import { changeCard, resetCards } from "./utilities.js";
+import { changeCard, resetCards, openHeader } from "./utilities.js";
 
 const cV = {
   z: "0px",
@@ -53,6 +53,7 @@ const startArr = [
     id: 0,
     method: changeCard,
     close: resetCards,
+    click: openHeader,
   },
   {
     template: "start-card",
@@ -61,6 +62,7 @@ const startArr = [
     id: 1,
     method: changeCard,
     close: resetCards,
+    click: openHeader,
   },
   {
     template: "start-card",
@@ -69,6 +71,7 @@ const startArr = [
     id: 2,
     method: changeCard,
     close: resetCards,
+    click: openHeader,
   },
   {
     template: "start-card",
@@ -77,23 +80,65 @@ const startArr = [
     id: 3,
     method: changeCard,
     close: resetCards,
+    click: openHeader,
   },
 ];
 
 const startContainer = document.querySelector(".start__container");
 const headerContainer = document.querySelector(".header");
 
-const headerOptions = {
-  headerType: "about",
-  mainTitleRu: "главная",
-  mainTitleEn: "main",
-  currentTitleRu: "обо\u00A0мне",
-  linksRu: ["резюме", "работы", "связь"],
-  linksEn: ["resume", "works", "links"],
-  stateOpen: false,
-  headerClass: "header",
-  languageBtn: "EN",
+const headerOptions = [
+  {
+    headerType: "about",
+    mainTitleRu: "главная",
+    mainTitleEn: "main",
+    currentTitleRu: "обо\u00A0мне",
+    linksRu: ["резюме", "работы", "связь"],
+    linksEn: ["resume", "works", "links"],
+    stateOpen: false,
+    headerClass: "header",
+    languageBtn: "EN",
+  },
+  {
+    headerType: "resume",
+    mainTitleRu: "главная",
+    mainTitleEn: "main",
+    currentTitleRu: "резюме",
+    linksRu: ["работы", "связь", "обо\u00A0мне"],
+    linksEn: ["works", "links", "about"],
+    stateOpen: false,
+    headerClass: "header",
+    languageBtn: "EN",
+  },
+  {
+    headerType: "works",
+    mainTitleRu: "главная",
+    mainTitleEn: "main",
+    currentTitleRu: "работы",
+    linksRu: ["связь", "обо\u00A0мне", "резюме"],
+    linksEn: ["links", "about", "resume"],
+    stateOpen: false,
+    headerClass: "header",
+    languageBtn: "EN",
+  },
+  {
+    headerType: "links",
+    mainTitleRu: "главная",
+    mainTitleEn: "main",
+    currentTitleRu: "связь",
+    linksRu: ["обо\u00A0мне", "резюме", "работы"],
+    linksEn: ["about", "resume", "works"],
+    stateOpen: false,
+    headerClass: "header",
+    languageBtn: "EN",
+  },
+];
+
+export {
+  morfingConst,
+  initialConst,
+  startArr,
+  startContainer,
+  headerContainer,
+  headerOptions,
 };
-
-
-export { morfingConst, initialConst, startArr, startContainer, headerContainer, headerOptions };

@@ -6,6 +6,7 @@ class StartCard {
     this._method = options.method;
     this._close = options.close;
     this._id = options.id;
+    this._click = options.click;
   }
 
   _getTemplate() {
@@ -24,17 +25,18 @@ class StartCard {
   }
 
   _setEventListeners() {
-    this._startCard
-      .querySelector(".start__link")
-      .addEventListener("mouseenter", () => {
-        this._method(this._id);
-      });
+    const card = this._startCard.querySelector(".start__link");
+    card.addEventListener("mouseenter", () => {
+      this._method(this._id);
+    });
 
-    this._startCard
-      .querySelector(".start__link")
-      .addEventListener("mouseleave", () => {
-        this._close();
-      });
+    card.addEventListener("mouseleave", () => {
+      this._close();
+    });
+
+    card.addEventListener("click", () => {
+      this._click(this._id);
+    });
   }
 }
 export { StartCard };

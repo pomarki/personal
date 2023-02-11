@@ -1,15 +1,3 @@
-const headerOptions = {
-  headerType: "about",
-  mainTitle: "главная",
-  mainTitleEn: "main",
-  currentTitleRu: "обо\u00A0мне",
-  linksRu: ["резюме", "работы", "связь"],
-  linksEn: ["resume", "works", "links"],
-  stateOpen: false,
-  headerClass: "header",
-  languageBtn: "EN",
-};
-
 import { HeaderLink } from "./HeaderLink.js";
 
 class Header {
@@ -41,26 +29,12 @@ class Header {
       this._currentTitleRu;
     this._linksArrRu.forEach((item, index) => {
       let conteiner = this._header.querySelector(".header__links-slot");
-      const link = new HeaderLink({linkName: item, tabindex: index});
+      const link = new HeaderLink({ linkName: item, tabindex: index });
       const linkElement = link.generateLink();
       conteiner.append(linkElement);
     });
     return this._header;
   }
-
-  /* _setEventListeners() {
-    this._startCard
-      .querySelector(".start__link")
-      .addEventListener("mouseenter", () => {
-        this._method(this._id);
-      });
-
-    this._startCard
-      .querySelector(".start__link")
-      .addEventListener("mouseleave", () => {
-        this._close();
-      });
-  } */
 }
 
 export { Header };

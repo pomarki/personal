@@ -1,7 +1,12 @@
 import { StartCard } from "./StartCard.js";
 import { Header } from "../components/Header.js";
-import { startArr, startContainer, headerContainer, headerOptions } from "./data.js";
-import { resetCards } from "./utilities.js";
+import {
+  startArr,
+  startContainer,
+  headerContainer,
+  headerOptions,
+} from "./data.js";
+import { resetCards, openHeader } from "./utilities.js";
 import {
   aboutSection,
   bodyBlock,
@@ -72,16 +77,16 @@ const toggleBookmark = (isOpen, location) => {
 startArr.forEach((item) => {
   const card = new StartCard(item);
   const cardElement = card.generateCard();
+  
   startContainer.append(cardElement);
 });
 
-
-const header = new Header(headerOptions);
-
-const headerEl = header.generateHeader()
-headerContainer.append(headerEl)
-
-console.log(headerEl)
+/* function openHeader(id) {
+  startContainer.remove();
+  const header = new Header(headerOptions[id]);
+  const headerEl = header.generateHeader();
+  headerContainer.append(headerEl);
+} */
 
 setTimeout(resetCards, 1000);
 
@@ -104,3 +109,5 @@ bookmarkLinksLabel.addEventListener("click", () => {
 bookmarkLinksClose.addEventListener("click", () => {
   toggleBookmark(false, "links");
 });
+
+

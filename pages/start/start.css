@@ -21,7 +21,9 @@
   overflow: hidden;
 }
 
-
+.start__container_type_invisible {
+  display: none;
+}
 
 .start__text {
   cursor: pointer;

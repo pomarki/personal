@@ -42,10 +42,10 @@ function morfingCard(item, arr, index, titleClass) {
 
 function openHeader(id) {
   startContainer.innerHTML = "";
+  startContainer.classList.add("start__container_type_invisible");
   const header = new Header(headerOptions[id]);
   const headerEl = header.generateHeader();
-  /* headerContainer.classList.add("header_visible"); */
-  headerContainer.className = "header header_type_close header_visible"
+  headerContainer.className = "header header_type_close header_visible";
   headerContainer.classList.add(`header_${headerOptions[id].headerType}`);
   headerContainer.append(headerEl);
 }

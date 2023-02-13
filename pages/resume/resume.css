@@ -1,6 +1,11 @@
 .resume {
   display: none;
 }
+
+.resume_type_visible {
+  display: flex;
+}
+
 .resume__container {
   margin-top: 165px;
   width: 990px;

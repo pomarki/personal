@@ -1,7 +1,7 @@
 .start {
   width: 100%;
   height: 100vh;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -10,6 +10,10 @@
   font-weight: 400;
   font-size: 40px;
   color: white;
+}
+
+.start_type_visible {
+  display: flex;
 }
 
 .start__container {

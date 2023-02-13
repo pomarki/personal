@@ -3,7 +3,17 @@ const headerThemeBtn = document.querySelector(".header__button_theme");
 const bodyBlock = document.querySelector(".body");
 
 const aboutSection = document.querySelector(".about");
+const linksSection = document.querySelector(".links");
+const worksSection = document.querySelector(".works");
+const resumeSection = document.querySelector(".resume");
+const sectionsArr = [
+  { about: aboutSection },
+  { links: linksSection },
+  { works: worksSection },
+  { resume: resumeSection },
+];
 
+const startSection = document.querySelector(".start");
 const headerSection = document.querySelector(".header");
 const headerLinks = document.querySelectorAll(".header__link");
 const headerBtns = document.querySelectorAll(".header__button");
@@ -42,4 +52,6 @@ export {
   headerThemeBtn,
   heaferLinksSlot,
   startContainer,
+  sectionsArr,
+  startSection,
 };

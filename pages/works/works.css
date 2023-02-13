@@ -1,9 +1,14 @@
 .works {
-  display: flex;
+  
   display: none;
   flex-direction: column;
   align-items: center;
 }
+
+.works_type_visible {
+  display: flex;
+}
+
 .works__card {
   display: grid;
   width: 1280px;

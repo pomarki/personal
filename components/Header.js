@@ -13,6 +13,7 @@ class Header {
     this._headerClass = options.headerClass;
     this._languageBtn = options.languageBtn;
     this._gotoMain = options.gotoMain;
+    this._toggle = options.toggle;
   }
 
   _getTemplate() {
@@ -30,7 +31,11 @@ class Header {
       this._currentTitleRu;
     this._linksArrRu.forEach((item, index) => {
       let conteiner = this._header.querySelector(".header__links-slot");
-      const link = new HeaderLink({ linkName: item, tabindex: index });
+      const link = new HeaderLink({
+        linkName: item,
+        tabindex: index,
+        class: `header__link_${this._headerType}`,
+      });
       const linkElement = link.generateLink();
       conteiner.append(linkElement);
     });
@@ -40,7 +45,13 @@ class Header {
 
   _setEventListeners() {
     const mainLink = this._header.querySelector(".header__main-title");
-    mainLink.addEventListener("click", () => {this._gotoMain()});
+    const stateBtn = this._header.querySelector(".header__button-state");
+    mainLink.addEventListener("click", () => {
+      this._gotoMain();
+    });
+    stateBtn.addEventListener("click", () => {
+      this._toggle();
+    });
   }
 }
 

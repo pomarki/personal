@@ -2,6 +2,7 @@ class HeaderLink {
   constructor(options) {
     this._linkName = options.linkName;
     this._tabindex = options.tabindex;
+    this._class = options.class;
   }
 
   _getTemplate() {
@@ -13,7 +14,9 @@ class HeaderLink {
 
   generateLink() {
     this._headerLink = this._getTemplate();
-    this._headerLink.querySelector(".header__link").textContent =
+    let link = this._headerLink.querySelector(".header__link");
+    link.classList.add(this._class)
+    link.textContent =
       this._linkName;
     this._headerLink.tabindex = this._tabindex;
     return this._headerLink;

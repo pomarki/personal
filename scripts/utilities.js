@@ -1,13 +1,9 @@
 import {
   startContainer,
-  headerContainer,
   initialConst,
   morfingConst,
   startArr,
-  headerOptions,
 } from "./data.js";
-
-import { Header } from "../components/Header.js";
 
 function changeCard(id) {
   let optionArr = getMorfingArr(id);
@@ -40,14 +36,15 @@ function morfingCard(item, arr, index, titleClass) {
   item.querySelector(titleClass).style.rotate = arr[index].rotate;
 }
 
-function openHeader(id) {
-  startContainer.innerHTML = "";
-  startContainer.classList.add("start__container_type_invisible");
-  const header = new Header(headerOptions[id]);
-  const headerEl = header.generateHeader();
-  headerContainer.className = "header header_type_close header_visible";
-  headerContainer.classList.add(`header_${headerOptions[id].headerType}`);
-  headerContainer.append(headerEl);
+function toggleHeader() {
+  const headerStateBtn = document.querySelector(".header__button-state");
+  const headerLinksSlot = document.querySelector(".header__links-slot");
+  const headerButtonsSlot = document.querySelector(".header__buttons-slot");
+  const headerSection = document.querySelector(".header");
+  headerSection.classList.toggle("header_type_close")
+  headerStateBtn.classList.toggle("header__button-state_type_close");
+  headerLinksSlot.classList.toggle("header_invisible-element");
+  headerButtonsSlot.classList.toggle("header_invisible-element");
 }
 
-export { changeCard, resetCards, openHeader };
+export { changeCard, resetCards, toggleHeader };

@@ -6,7 +6,7 @@ import {
   headerContainer,
   headerOptions,
 } from "./data.js";
-import { resetCards, openHeader } from "./utilities.js";
+import { resetCards } from "./utilities.js";
 
 import { renderStartPage } from "../renders/renders.js";
 

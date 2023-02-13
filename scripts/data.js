@@ -1,5 +1,7 @@
-import { changeCard, resetCards, openHeader } from "./utilities.js";
+import { changeCard, resetCards } from "./utilities.js";
+import { renderHeader } from "../renders/renders.js";
 import { renderStartPage } from "../renders/renders.js";
+import { toggleHeader } from "./utilities.js";
 const cV = {
   z: "0px",
   s: "65px",
@@ -53,7 +55,7 @@ const startArr = [
     id: 0,
     method: changeCard,
     close: resetCards,
-    click: openHeader,
+    click: renderHeader,
   },
   {
     template: "start-card",
@@ -62,7 +64,7 @@ const startArr = [
     id: 1,
     method: changeCard,
     close: resetCards,
-    click: openHeader,
+    click: renderHeader,
   },
   {
     template: "start-card",
@@ -71,7 +73,7 @@ const startArr = [
     id: 2,
     method: changeCard,
     close: resetCards,
-    click: openHeader,
+    click: renderHeader,
   },
   {
     template: "start-card",
@@ -80,7 +82,7 @@ const startArr = [
     id: 3,
     method: changeCard,
     close: resetCards,
-    click: openHeader,
+    click: renderHeader,
   },
 ];
 
@@ -99,6 +101,7 @@ const headerOptions = [
     headerClass: "header",
     languageBtn: "EN",
     gotoMain: renderStartPage,
+    toggle: toggleHeader,
   },
   {
     headerType: "resume",
@@ -111,6 +114,7 @@ const headerOptions = [
     headerClass: "header",
     languageBtn: "EN",
     gotoMain: renderStartPage,
+    toggle: toggleHeader,
   },
   {
     headerType: "works",
@@ -123,6 +127,7 @@ const headerOptions = [
     headerClass: "header",
     languageBtn: "EN",
     gotoMain: renderStartPage,
+    toggle: toggleHeader,
   },
   {
     headerType: "links",
@@ -135,6 +140,7 @@ const headerOptions = [
     headerClass: "header",
     languageBtn: "EN",
     gotoMain: renderStartPage,
+    toggle: toggleHeader,
   },
 ];
 

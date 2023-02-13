@@ -1,0 +1,38 @@
+.error {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ef476f;
+}
+.error__title {
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 120px;
+  margin: 0;
+}
+.error__subtitle {
+  margin: 25px 0 0 0;
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+}
+.error__link {
+  text-decoration: none;
+  margin: 320px 0 10px 0;
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  color: #000;
+}
+.error__line {
+    width: 105px;
+    height: 3px;
+    background-color: #ef476f;
+}

@@ -29,6 +29,8 @@ class Header {
       this._mainTitleRu;
     this._header.querySelector(".header__current-title").textContent =
       this._currentTitleRu;
+    this._header.querySelector(".header__button_lang").textContent =
+      this._languageBtn;
     this._linksArrRu.forEach((item, index) => {
       let conteiner = this._header.querySelector(".header__links-slot");
       const link = new HeaderLink({

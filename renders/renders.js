@@ -1,4 +1,9 @@
-import { startArr, startContainer, headerContainer, headerOptions } from "../scripts/data.js";
+import {
+  startArr,
+  startContainer,
+  headerContainer,
+  headerOptions,
+} from "../scripts/data.js";
 import { headerSection } from "../scripts/constants.js";
 import { resetCards } from "../scripts/utilities.js";
 import { StartCard } from "../scripts/StartCard.js";
@@ -24,7 +29,7 @@ function renderHeader(id) {
   const headerEl = header.generateHeader();
   headerContainer.className = "header header_type_close header_visible";
   headerContainer.classList.add(`header_${headerOptions[id].headerType}`);
-  
+
   headerContainer.append(headerEl);
 }
 

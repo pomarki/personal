@@ -53,44 +53,11 @@ const toggleBookmark = (isOpen, location) => {
   }
 };
 
-/* const toggleHeader = () => {
-  headerStateBtn.classList.toggle("header__button-state_type_close");
-  headerSection.classList.toggle("header_type_close");
-  heaferLinksSlot.classList.toggle("header_invisible-element");
-  const blockToggle = (arr, ignore) => {
-    arr.forEach((item, index) => {
-      if (index === ignore) {
-        return;
-      } else {
-        item.classList.toggle("header_invisible-element");
-      }
-    });
-  };
-  blockToggle(headerLinksArr);
-  blockToggle(headerBtnsArr, 0);
-}; */
-
-/* const toggleTheme = () => {
-  bodyBlock.classList.toggle("body_theme_dark");
-  headerThemeBtn.classList.toggle("header__button_theme-dark");
-  aboutSection.classList.toggle("about_theme_dark");
-  bookmarkAboutLabel.classList.toggle("bookmark__label_theme_dark");
-};
- */
-
-
-
-
-
-renderStartPage()
-
-/* headerStateBtn.addEventListener("click", toggleHeader); */
+renderStartPage();
 
 bookmarkAboutLabel.addEventListener("click", () => {
   toggleBookmark(true, "about");
 });
-
-/* headerThemeBtn.addEventListener("click", toggleTheme); */
 
 bookmarkAboutClose.addEventListener("click", () => {
   toggleBookmark(false, "about");

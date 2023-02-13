@@ -47,4 +47,6 @@ function toggleHeader() {
   headerButtonsSlot.classList.toggle("header_invisible-element");
 }
 
+function toggleTheme() {}
+
 export { changeCard, resetCards, toggleHeader };

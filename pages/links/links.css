@@ -8,12 +8,9 @@
 }
 
 .links__container {
-  width: 990px;
   height: 830px;
-  display: grid;
   grid-template-columns: 490px 490px;
   grid-template-rows: 1fr min-content 1fr;
-  overflow: hidden;
 }
 .links__form-container {
   width: 390px;

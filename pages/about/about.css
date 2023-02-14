@@ -8,14 +8,11 @@
 }
 
 .about__container {
-  width: 990px;
   height: 100%;
   margin-top: 165px;
-  display: grid;
   grid-template-columns: 190px 1fr;
   grid-template-rows: repeat(3, 1fr);
   column-gap: 110px;
-  overflow: hidden;
 }
 
 .about__text-block {

@@ -8,11 +8,8 @@
 
 .resume__container {
   margin-top: 165px;
-  width: 990px;
-  display: grid;
   grid-template-columns: 495px 490px;
   grid-template-rows: 1fr 1fr;
-  overflow: hidden;
   color: var(--black);
 }
 .resume__item {

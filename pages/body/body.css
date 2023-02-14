@@ -127,3 +127,9 @@ html {
   font-size: 16px;
   overflow: hidden;
 }
+
+.body__container {
+  width: 990px;
+  display: grid;
+  overflow: hidden;
+}

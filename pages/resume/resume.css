@@ -21,13 +21,11 @@
   flex-direction: column;
   filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.25));
   background-color: var(--white);
-  /* background-color: tomato; */
   width: 490px;
-  /* padding-bottom: 10px; */
   border-left: 4px var(--light-gray) solid;
   box-sizing: border-box;
   justify-content: center;
-  margin-bottom: 20px; /*убрать*/
+  margin-bottom: 20px;
 }
 
 .resume__item_type_s {
@@ -67,11 +65,10 @@
 }
 
 .resume__line_type_experiens {
-  background-color: var(--red); 
+  background-color: var(--red);
 }
 
 .resume__line_type_education {
-  
   background-color: var(--blue);
 }
 
@@ -169,7 +166,7 @@
 }
 
 .resume__footer-button_back-green {
-background: no-repeat url("../../images/arrow-L-green.svg");
+  background: no-repeat url("../../images/arrow-L-green.svg");
 }
 
 .resume__red {

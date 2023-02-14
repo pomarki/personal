@@ -1,16 +1,6 @@
 .about {
-  width: 100%;
-  height: 100vh;
-  display: none;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-family: "Source Code Pro", "Arial", "Helvetica";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: var(--black);
+  display: none;
 }
 
 .about_type_visible {

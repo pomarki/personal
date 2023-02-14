@@ -1,8 +1,5 @@
 .works {
-  
   display: none;
-  flex-direction: column;
-  align-items: center;
 }
 
 .works_type_visible {
@@ -91,4 +88,3 @@
   font-size: 25px;
   color: var(--black);
 }
-

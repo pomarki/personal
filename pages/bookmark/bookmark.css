@@ -125,7 +125,6 @@
   transition: transform 1s ease;
 }
 .bookmark__close:hover {
-  /* background: no-repeat url("../../images/close-invert.svg"); */
   rotate: 90deg;
   transition: all 1s ease;
 }

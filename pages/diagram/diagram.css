@@ -11,6 +11,12 @@
   grid-row-end: 4;
   display: flex;
   flex-direction: row;
+  z-index: 1;
+}
+
+.diagram_type_s {
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 
 .diagram__canvas {
@@ -24,6 +30,10 @@
   min-width: 190px;
 }
 
+.diagram__chart_type_close {
+  display: none;
+}
+
 .diagram__unit {
   fill: none;
   stroke-width: 15; /* ширина обводки */
@@ -32,7 +42,6 @@
   animation-duration: 2.5s;
   transition-property: all;
   transition-duration: 2.5s;
- 
 }
 
 .diagram__unit:nth-child(1) {

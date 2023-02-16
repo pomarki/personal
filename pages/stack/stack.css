@@ -8,6 +8,17 @@
   flex-direction: row;
   align-items: center;
   justify-content: start;
+  z-index: 1;
+}
+
+.stack_type_S {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  margin-bottom: 0;
+}
+
+.stack_blue {
+  background-color: var(--blue);
 }
 
 .stack__subtitle {
@@ -16,6 +27,11 @@
   font-weight: 400;
   font-size: 20px;
   color: var(--black);
+}
+
+.stack__subtitle_type_S {
+  color: var(--white);
+  margin: 0 0 44px 5px;
 }
 
 .stack__bracket {
@@ -47,4 +63,12 @@
   font-weight: 400;
   font-size: 18px;
   color: var(--red);
+}
+
+.stack__list-item_type_S {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 15px;
+  color: var(--white);
 }

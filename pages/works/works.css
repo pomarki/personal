@@ -59,6 +59,10 @@
   padding: 0;
 }
 
+.works__button:hover {
+  opacity: .8;
+}
+
 .works__button_open {
   width: 50px;
   height: 10px;
@@ -66,12 +70,20 @@
   margin: 0 31px 0 64px;
 }
 
+.works__button_open:hover {
+  opacity: .8;
+}
+
 .works__link {
+  width: 400px;
+  white-space: nowrap;
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
   text-decoration: none;
   color: var(--black);
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .works__subtitle {

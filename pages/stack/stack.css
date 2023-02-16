@@ -41,6 +41,7 @@
   font-size: 60px;
   color: var(--orange);
 }
+
 .stack__bracket:first-of-type {
   margin: 0 0 0 12px;
 }

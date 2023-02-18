@@ -12,6 +12,31 @@
     width: 100;
   }
 }
+:root {
+  --dark-blue: #073b4c;
+  --black: #000000;
+  --white: #ffffff;
+  --blue: #118ab2;
+  --blue-cafe: #6faed1;
+  --light-blue: #c3e2ec;
+  --gray: #e4e7e2;
+  --red: #ef476f;
+  --light-red: #fbd1db;
+  --green: #06d6a0;
+  --light-green: #a5f0dd;
+  --extra-light-green: #cdf7ec;
+  --violet: #67468b;
+  --orange: #ffd166;
+  --light-gray: rgba(217, 217, 217, 0.1);
+}
+
+body {
+  display: flex;
+  width: 90vw;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
 
 .diagram {
   grid-column-start: 3;
@@ -20,7 +45,6 @@
   grid-row-end: 4;
   display: flex;
   flex-direction: row;
-  z-index: 1;
 }
 
 .diagram_type_s {
@@ -36,6 +60,7 @@
   justify-content: space-between;
   align-items: center;
   width: 190px;
+  
 }
 
 .diagram__canvas_type_s {
@@ -44,6 +69,7 @@
 
 .diagram__chart {
   min-width: 190px;
+  cursor: pointer;
 }
 
 .diagram__chart_s {
@@ -56,7 +82,7 @@
 
 .diagram__unit {
   fill: none;
-  stroke-width: 15; /* ширина обводки */
+  stroke-width: 15;
   cursor: pointer;
   animation-name: render-circle;
   animation-duration: 2.5s;
@@ -66,24 +92,19 @@
 
 .diagram__unit:nth-child(1) {
   stroke: var(--red);
-  stroke-dasharray: 52, 100;
-  stroke-dashoffset: 0;
 }
 
 .diagram__unit:nth-child(2) {
   stroke: var(--blue);
-  stroke-dasharray: 43, 100;
-  stroke-dashoffset: -52;
 }
 
 .diagram__unit:nth-child(3) {
   stroke: var(--orange);
-  stroke-dasharray: 5, 100;
-  stroke-dashoffset: -95;
 }
 
 .diagram__unit:hover {
   stroke-width: 18;
+  stroke: var(--red);
 }
 
 .diagram__unit_s {

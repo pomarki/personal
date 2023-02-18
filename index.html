@@ -286,7 +286,10 @@
                 </li>
                 <li class="works__card works__card_S">
                   <div class="works__card-title works__card-title_blue">
-                    <button class="works__button works__button_open" id="123"></button>
+                    <button
+                      class="works__button works__button_open"
+                      id="123"
+                    ></button>
                     <a href="#" class="works__link">movies-explorer</a>
                   </div>
                   <div class="works__subtitle works__subtitle_S">
@@ -332,43 +335,24 @@
                     <p class="stack__bracket">}</p>
                   </div>
                   <div class="diagram diagram_type_s">
-                    <div class="diagram__canvas diagram__canvas_type_s">
-                      <svg
-                        class="diagram__chart diagram__chart_type_close"
-                        width="190"
-                        height="190"
-                        viewBox="0 0 50 50"
-                      >
-                        <circle
-                          class="diagram__unit"
-                          r="15.9"
-                          cx="50%"
-                          cy="50%"
-                        ></circle>
-                        <circle
-                          class="diagram__unit"
-                          r="15.9"
-                          cx="50%"
-                          cy="50%"
-                        ></circle>
-                        <circle
-                          class="diagram__unit"
-                          r="15.9"
-                          cx="50%"
-                          cy="50%"
-                        ></circle>
-                      </svg>
-                      <svg class="diagram__chart_s" width="190" height="10">
-                        <rect class="diagram__unit_s" />
-                        <rect class="diagram__unit_s" />
-                        <rect class="diagram__unit_s" />
-                     </svg>
-                    </div>
+                    <div class="diagram__canvas diagram__canvas_type_s"></div>
                     <div class="diagram__legend">
                       <ul class="diagram__list diagram__list_type_s">
-                        <li class="diagram__legend-marker diagram__legend-marker_type_s">HTML:&nbsp;52%</li>
-                        <li class="diagram__legend-marker diagram__legend-marker_type_s">CSS:&nbsp;48%</li>
-                        <li class="diagram__legend-marker diagram__legend-marker_type_s">JS:&nbsp;0%</li>
+                        <li
+                          class="diagram__legend-marker diagram__legend-marker_type_s"
+                        >
+                          HTML:&nbsp;52%
+                        </li>
+                        <li
+                          class="diagram__legend-marker diagram__legend-marker_type_s"
+                        >
+                          CSS:&nbsp;48%
+                        </li>
+                        <li
+                          class="diagram__legend-marker diagram__legend-marker_type_s"
+                        >
+                          JS:&nbsp;0%
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -482,6 +466,25 @@
       </template>
       <template id="header-link">
         <a tabindex="" class="header__link"></a>
+      </template>
+      <template id="diagram-circle">
+        <svg
+          class="diagram__chart diagram__chart_type_close"
+          width="190"
+          height="190"
+          viewBox="0 0 50 50"
+        >
+          <circle class="diagram__unit" r="15.9" cx="50%" cy="50%"></circle>
+          <circle class="diagram__unit" r="15.9" cx="50%" cy="50%"></circle>
+          <circle class="diagram__unit" r="15.9" cx="50%" cy="50%"></circle>
+        </svg>
+      </template>
+      <template id="diagram-rect">
+        <svg class="diagram__chart_s" width="190" height="10">
+          <rect class="diagram__unit_s" />
+          <rect class="diagram__unit_s" />
+          <rect class="diagram__unit_s" />
+        </svg>
       </template>
     </body>
   </html>

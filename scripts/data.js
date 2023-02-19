@@ -2,6 +2,9 @@ import { changeCard, resetCards } from "./utilities.js";
 import { renderHeader } from "../renders/renders.js";
 import { renderStartPage } from "../renders/renders.js";
 import { toggleHeader } from "./utilities.js";
+
+const ns = "http://www.w3.org/2000/svg";
+
 const cV = {
   z: "0px",
   s: "65px",
@@ -46,6 +49,14 @@ const morfingConst = [
     { id: 3, width: cV.xl, top: cV.e, left: cV.z, rotate: cV.ed },
   ],
 ];
+
+const circlesParams = {
+  r: "15.9",
+  cx: "50%",
+  cy: "50%",
+  "stroke-width": "15",
+  fill: "none",
+}
 
 const startArr = [
   {
@@ -145,7 +156,9 @@ const headerOptions = [
 ];
 
 export {
+  circlesParams,
   morfingConst,
+  ns,
   initialConst,
   startArr,
   startContainer,

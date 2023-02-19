@@ -88,9 +88,10 @@ body {
   animation-duration: 2.5s;
   transition-property: all;
   transition-duration: 2.5s;
+ /*  stroke: var(--green); */
 }
 
-.diagram__unit:nth-child(1) {
+/* .diagram__unit:nth-child(1) {
   stroke: var(--red);
 }
 
@@ -100,11 +101,11 @@ body {
 
 .diagram__unit:nth-child(3) {
   stroke: var(--orange);
-}
+} */
 
 .diagram__unit:hover {
   stroke-width: 18;
-  stroke: var(--red);
+  
 }
 
 .diagram__unit_s {

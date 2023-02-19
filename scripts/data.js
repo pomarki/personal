@@ -56,6 +56,7 @@ const circlesParams = {
   cy: "50%",
   "stroke-width": "15",
   fill: "none",
+  stroke: ["red", "orange", "blue", "green", "violet"]
 }
 
 const startArr = [

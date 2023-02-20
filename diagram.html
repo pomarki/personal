@@ -5,18 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="pages/diagram/diagrame-new.css" />
+    <link rel="stylesheet" href="pages/works/works.css" />
+    <link rel="stylesheet" href="pages/stack/stack.css" />
     <script type="module" src="scripts/dia.js" defer></script>
     <title>diagram</title>
   </head>
   <body>
-    <div class="diagram">
-      <div class="diagram__canvas"></div>
-    </div>
-
+    <section class="works body__section">
+      <div class="works__container">
+        <ul class="works__list"></ul>
+      </div>
+    </section>
     <template id="diagrame-legend">
       <ul class="diagram__list">
         <li class="diagram__legend-marker"></li>
       </ul>
+    </template>
+    <template id="works-card">
+      <li class="works__card">
+        <div class="works__card-title">
+          <button class="works__button"></button>
+          <a href="#" class="works__link"></a>
+        </div>
+        <div class="works__subtitle">
+          <div class="works__info">
+            <p class="works__repo-name">repository:</p>
+            <ul class="works__repo-list"></ul>
+          </div>
+          <p class="works__description"></p>
+        </div>
+        <div class="stack">
+          <h2 class="stack__subtitle">stack:</h2>
+          <p class="stack__bracket">{</p>
+          <ul class="stack__list">
+            
+            <li class="stack__list-item">|</li>
+            <li class="stack__list-item">CSS3</li>
+            <li class="stack__list-item">|</li>
+            <li class="stack__list-item">grid</li>
+            <li class="stack__list-item">|</li>
+            <li class="stack__list-item">flex</li>
+            <li class="stack__list-item">|</li>
+            <li class="stack__list-item">GIT</li>
+            <li class="stack__list-item">|</li>
+            <li class="stack__list-item">Figma</li>
+            <li class="stack__list-item">|</li>
+            <li class="stack__list-item">semantic</li>
+          </ul>
+          <p class="stack__bracket">}</p>
+        </div>
+        <div class="diagram">
+          <div class="diagram__legend">
+            <ul class="diagram__list">
+              <li class="diagram__legend-marker">HTML:&nbsp;52%</li>
+              <li class="diagram__legend-marker">CSS:&nbsp;48%</li>
+              <li class="diagram__legend-marker">JS:&nbsp;0%</li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </template>
+    <template id="works-repo">
+      <li class="works__repo-item">
+        <a href="#" class="works__repo-link"></a>
+      </li>
+    </template>
+    <template id="stack-list">
+      <li class="stack__list-item"></li>
     </template>
   </body>
 </html>

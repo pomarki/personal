@@ -10,6 +10,7 @@ class Diagram {
     this._circleType = options.circleType;
     this._languages = options.languages;
   }
+
   _generateCircle(values) {
     let color = circlesParams.stroke[values.color];
 

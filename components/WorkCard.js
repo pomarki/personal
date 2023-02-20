@@ -1,5 +1,6 @@
 import { Diagram } from "./Diagram.js";
 import { RepoLink } from "./RepoLink.js";
+import { ListItem } from "./ListItem.js";
 
 class WorkCard {
   constructor(options) {
@@ -23,13 +24,31 @@ class WorkCard {
     this._card = this._getTemplateCard();
     const mainLink = this._card.querySelector(".works__link");
     const repoList = this._card.querySelector(".works__repo-list");
+    const stackList = this._card.querySelector(".stack__list");
+    const diagramContainer = this._card.querySelector(".diagram__canvas");
     mainLink.href = this._mainlink;
     mainLink.textContent = this._title;
+
+    const diagramEl = new Diagram({
+      circleType: true,
+      languages: this._languages,
+    });
+
+    const diagramItem = diagramEl.generateDiagram();
+    diagramContainer.append(diagramItem);
+
     this._repolinks.forEach((item) => {
       const linkItem = new RepoLink(item);
       const linkEl = linkItem.generateLink();
       repoList.append(linkEl);
     });
+
+    this._stack.forEach((item) => {
+      const stackItem = new ListItem(item);
+      const stackEl = stackItem.generateListItem();
+      stackList.append(stackEl);
+    });
+
     this._card.querySelector(".works__description").textContent = this._info;
 
     return this._card;

@@ -87,20 +87,7 @@ body {
   animation-duration: 2.5s;
   transition-property: all;
   transition-duration: 2.5s;
-  /*  stroke: var(--green); */
 }
-
-/* .diagram__unit:nth-child(1) {
-  stroke: var(--red);
-}
-
-.diagram__unit:nth-child(2) {
-  stroke: var(--blue);
-}
-
-.diagram__unit:nth-child(3) {
-  stroke: var(--orange);
-} */
 
 .diagram__unit:hover {
   stroke-width: 18;
@@ -141,6 +128,7 @@ body {
   font-size: 12px;
   margin: 0 0 10px 0;
   list-style: none;
+  cursor: pointer;
 }
 
 .diagram__legend-marker_type_s {
@@ -192,4 +180,8 @@ body {
 
 .diagram__legend-marker:nth-child(5)::before {
   background-color: var(--violet);
+}
+
+.diagram_hovered {
+  stroke-width: 18;
 }

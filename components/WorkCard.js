@@ -55,14 +55,23 @@ class WorkCard {
     });
 
     this._card.querySelector(".works__description").textContent = this._info;
-
+    this._setEventListeners();
     return this._card;
   }
 
   _setEventListeners() {
-    
-  }
+    let captionsList = this._card.querySelectorAll(".diagram__legend-marker");
+    let unitsList = this._card.querySelectorAll(".diagram__unit");
+    captionsList.forEach((item, index) => {
+      item.addEventListener("mouseover", () => {
+        unitsList[index].classList.add("diagram_hovered");
+      });
 
+      item.addEventListener("mouseout", () => {
+        unitsList[index].classList.remove("diagram_hovered");
+      });
+    });
+  }
 }
 
 export { WorkCard };

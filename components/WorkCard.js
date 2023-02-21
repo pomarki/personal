@@ -1,6 +1,7 @@
 import { Diagram } from "./Diagram.js";
 import { RepoLink } from "./RepoLink.js";
 import { ListItem } from "./ListItem.js";
+import { Legend } from "./Legend.js";
 
 class WorkCard {
   constructor(options) {
@@ -26,6 +27,10 @@ class WorkCard {
     const repoList = this._card.querySelector(".works__repo-list");
     const stackList = this._card.querySelector(".stack__list");
     const diagramContainer = this._card.querySelector(".diagram__canvas");
+    const legend = new Legend(this._languages);
+    const legendEl = legend.generateLegend();
+    this._card.querySelector(".diagram__legend").append(legendEl);
+
     mainLink.href = this._mainlink;
     mainLink.textContent = this._title;
 
@@ -53,6 +58,11 @@ class WorkCard {
 
     return this._card;
   }
+
+  _setEventListeners() {
+    
+  }
+
 }
 
 export { WorkCard };

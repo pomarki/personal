@@ -14,7 +14,6 @@ class Diagram {
   _generateCircle(values) {
     let color = circlesParams.stroke[values.color];
 
-    console.log(color);
     this._circle = document.createElementNS(ns, "circle");
     this._circle.setAttributeNS(null, "r", "15.9");
     this._circle.setAttributeNS(null, "cx", "50%");
@@ -45,7 +44,7 @@ class Diagram {
 
     for (const key in this._languages) {
       let color = langArr.indexOf(key);
-      console.log(color);
+      
       let dasharray = this._languages[key];
       let values = {
         dasharray: dasharray,

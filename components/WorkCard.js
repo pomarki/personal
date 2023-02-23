@@ -20,6 +20,21 @@ class WorkCard {
     return cardElement;
   }
 
+  _toggleCard(card) {
+    card.classList.toggle("works__card_S");
+    card
+      .querySelector(".works__subtitle")
+      .classList.toggle("works__subtitle_S");
+    card.querySelector(".stack").classList.toggle("stack_type_S");
+    card
+      .querySelector(".stack__subtitle")
+      .classList.toggle("stack__subtitle_type_S");
+    Array.from(card.querySelectorAll(".stack__list-item")).forEach((i) => {
+      i.classList.toggle("stack__list-item_type_S");
+    });
+    card.querySelector(".diagram").classList.toggle("diagram_type_s")
+  }
+
   generateCard() {
     this._card = this._getTemplateCard();
     const mainLink = this._card.querySelector(".works__link");
@@ -89,6 +104,13 @@ class WorkCard {
       ".diagram__legend-marker-small"
     );
     const unitsListSmall = this._card.querySelectorAll(".diagram__unit-rect");
+    const toggleButton = this._card.querySelector(".works__button");
+
+    const worksCardConteiner = this._card.querySelector(".works__card");
+
+    toggleButton.addEventListener("click", () => {
+      this._toggleCard(worksCardConteiner);
+    });
 
     captionsListBig.forEach((item, index) => {
       item.addEventListener("mouseover", () => {
@@ -109,7 +131,6 @@ class WorkCard {
         unitsListSmall[index].classList.remove("diagram_hovered-small");
       });
     });
-
   }
 }
 

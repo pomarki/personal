@@ -11,7 +11,6 @@ class WorkCard {
     this._info = options.info;
     this._stack = options.stack;
     this._languages = options.languages;
-    /* this._circleType = options.circleType; */
   }
 
   _getTemplateCard() {
@@ -26,51 +25,91 @@ class WorkCard {
     const mainLink = this._card.querySelector(".works__link");
     const repoList = this._card.querySelector(".works__repo-list");
     const stackList = this._card.querySelector(".stack__list");
-    const diagramContainer = this._card.querySelector(".diagram__canvas");
-    const legend = new Legend(this._languages);
-    const legendEl = legend.generateLegend();
-    this._card.querySelector(".diagram__legend").append(legendEl);
+    const diagramContainerBig = this._card.querySelector(".diagram__canvas");
+    const diagramContainerSmall = this._card.querySelector(
+      ".diagram__canvas_type_s"
+    );
+    const legendContainerBig = this._card.querySelector(".diagram__legend-big");
+    const legendContainerSmall = this._card.querySelector(
+      ".diagram__legend-small"
+    );
 
+    // сборка главной ссылки
     mainLink.href = this._mainlink;
     mainLink.textContent = this._title;
 
+    // сборка легенды диаграммы
+    const legend = new Legend(this._languages);
+    const legendElBig = legend.generateLegend("big");
+    const legendElSmall = legend.generateLegend("small");
+
+    legendContainerBig.append(legendElBig);
+
+    legendContainerSmall.append(legendElSmall);
+
+    // сборка диаграммы
     const diagramEl = new Diagram({
       circleType: true,
       languages: this._languages,
     });
 
     const diagramItem = diagramEl.generateDiagram();
-    diagramContainer.append(diagramItem);
+    const diagramItemSmall = diagramEl.generateDiagramSmall();
+    diagramContainerBig.append(diagramItem);
+    diagramContainerSmall.append(diagramItemSmall);
 
+    // сборка ссылок на репозитории
     this._repolinks.forEach((item) => {
       const linkItem = new RepoLink(item);
       const linkEl = linkItem.generateLink();
       repoList.append(linkEl);
     });
 
+    // сборка стека
     this._stack.forEach((item) => {
       const stackItem = new ListItem(item);
       const stackEl = stackItem.generateListItem();
       stackList.append(stackEl);
     });
 
+    // сборка информационного блока
     this._card.querySelector(".works__description").textContent = this._info;
+
     this._setEventListeners();
+
     return this._card;
   }
 
   _setEventListeners() {
-    let captionsList = this._card.querySelectorAll(".diagram__legend-marker");
-    let unitsList = this._card.querySelectorAll(".diagram__unit");
-    captionsList.forEach((item, index) => {
+    const captionsListBig = this._card.querySelectorAll(
+      ".diagram__legend-marker-big"
+    );
+    const unitsListBig = this._card.querySelectorAll(".diagram__unit-circle");
+    const captionsListSmall = this._card.querySelectorAll(
+      ".diagram__legend-marker-small"
+    );
+    const unitsListSmall = this._card.querySelectorAll(".diagram__unit-rect");
+
+    captionsListBig.forEach((item, index) => {
       item.addEventListener("mouseover", () => {
-        unitsList[index].classList.add("diagram_hovered");
+        unitsListBig[index].classList.add("diagram_hovered-big");
       });
 
       item.addEventListener("mouseout", () => {
-        unitsList[index].classList.remove("diagram_hovered");
+        unitsListBig[index].classList.remove("diagram_hovered-big");
       });
     });
+
+    captionsListSmall.forEach((item, index) => {
+      item.addEventListener("mouseover", () => {
+        unitsListSmall[index].classList.add("diagram_hovered-small");
+      });
+
+      item.addEventListener("mouseout", () => {
+        unitsListSmall[index].classList.remove("diagram_hovered-small");
+      });
+    });
+
   }
 }
 

@@ -16,11 +16,17 @@
         <ul class="works__list"></ul>
       </div>
     </section>
-    <template id="diagrame-legend">
-      <ul class="diagram__list"></ul>
+    <template id="diagrame-legend-big">
+      <ul class="diagram__list-big"></ul>
     </template>
-    <template id="diagrame-legend-item">
-      <li class="diagram__legend-marker"></li>
+    <template id="diagrame-legend-small">
+      <ul class="diagram__list-small"></ul>
+    </template>
+    <template id="diagrame-legend-item-big">
+      <li class="diagram__legend-marker-big"></li>
+    </template>
+    <template id="diagrame-legend-item-small">
+      <li class="diagram__legend-marker-small"></li>
     </template>
     <template id="works-card">
       <li class="works__card">
@@ -43,7 +49,11 @@
         </div>
         <div class="diagram">
           <div class="diagram__canvas"></div>
-          <div class="diagram__legend"></div>
+          <div class="diagram__legend-big"></div>
+        </div>
+        <div class="diagram diagram_type_s">
+          <div class="diagram__canvas diagram__canvas_type_s"></div>
+          <div class="diagram__legend-small"></div>
         </div>
       </li>
     </template>

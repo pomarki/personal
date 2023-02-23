@@ -27,9 +27,23 @@ class Diagram {
       `${values.dasharray} 100`
     );
     this._circle.setAttributeNS(null, "stroke-dashoffset", values.dashoffset);
-    this._circle.classList.add("diagram__unit");
+    this._circle.classList.add("diagram__unit-circle");
 
     return this._circle;
+  }
+
+  _generateRectangle(values) {
+    let color = circlesParams.stroke[values.color];
+    this._rect = document.createElementNS(ns, "rect");
+    this._rect.setAttributeNS(null, "x", values.x);
+    this._rect.setAttributeNS(null, "y", "0");
+    this._rect.setAttributeNS(null, "height", "10");
+    this._rect.setAttributeNS(null, "width", values.width);
+    this._rect.setAttributeNS(null, "stroke-width", "0");
+    this._rect.setAttributeNS(null, "fill", `var(--${color || "gray"})`);
+    this._rect.classList.add("diagram__unit-rect");
+    
+    return this._rect;
   }
 
   generateDiagram() {
@@ -44,7 +58,7 @@ class Diagram {
 
     for (const key in this._languages) {
       let color = langArr.indexOf(key);
-      
+
       let dasharray = this._languages[key];
       let values = {
         dasharray: dasharray,
@@ -54,6 +68,32 @@ class Diagram {
       let diagramUnit = this._generateCircle(values);
       this._svgSprite.append(diagramUnit);
       startOffset = startOffset - dasharray;
+    }
+
+    return this._svgSprite;
+  }
+
+  generateDiagramSmall() {
+    let startOffset = 0;
+    const langArr = Object.keys(this._languages);
+
+    this._svgSprite = document.createElementNS(ns, "svg");
+    this._svgSprite.setAttribute("width", "190");
+    this._svgSprite.setAttribute("height", "10");
+    this._svgSprite.classList.add("diagram__chart_s");
+
+    for (const key in this._languages) {
+      let color = langArr.indexOf(key);
+      let width = this._languages[key] * 1.9;
+
+      let values = {
+        width: width,
+        x: startOffset,
+        color: color,
+      };
+      let diagramUnit = this._generateRectangle(values);
+      this._svgSprite.append(diagramUnit);
+      startOffset = startOffset + width;
     }
 
     return this._svgSprite;

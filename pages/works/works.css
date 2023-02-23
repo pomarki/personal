@@ -1,5 +1,6 @@
 .works {
   /* display: none; */
+  font-family: "Source Code Pro", "Arial", "Helvetica";
 }
 
 .works_type_visible {
@@ -12,6 +13,7 @@
 
 .works__list {
   padding: 0;
+  margin: 0;
 }
 
 .works__repo-list {
@@ -27,7 +29,7 @@
   margin-bottom: 0;
 }
 
-.works .works__card {
+.works__card {
   display: grid;
   width: 1280px;
   grid-template-columns: 145px 1fr 327px;

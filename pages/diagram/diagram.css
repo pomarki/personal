@@ -14,6 +14,7 @@
 }
 
 .diagram {
+  
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 2;
@@ -26,7 +27,7 @@
 .diagram_type_s {
   grid-row-start: 1;
   grid-row-end: 2;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   flex-direction: column;
 }
@@ -38,9 +39,9 @@
   width: 190px;
 }
 
-.diagram__canvas_type_s {
+/* .diagram__canvas_type_s {
   height: 10px;
-}
+} */
 
 .diagram__chart {
   min-width: 190px;

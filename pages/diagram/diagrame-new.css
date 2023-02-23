@@ -39,6 +39,7 @@ body {
 }
 
 .diagram {
+  position: relative;
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 2;
@@ -50,9 +51,10 @@ body {
 .diagram_type_s {
   grid-row-start: 1;
   grid-row-end: 2;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   flex-direction: column;
+  z-index: 2;
 }
 
 .diagram__canvas {
@@ -79,7 +81,7 @@ body {
   display: none;
 }
 
-.diagram__unit {
+.diagram__unit-circle {
   fill: none;
   stroke-width: 15;
   cursor: pointer;
@@ -89,14 +91,11 @@ body {
   transition-duration: 2.5s;
 }
 
-.diagram__unit:hover {
+.diagram__unit-circle:hover {
   stroke-width: 18;
 }
 
-.diagram__unit_s {
-  height: 10px;
-  stroke-width: 0;
-  width: 0;
+.diagram__unit-rect {
   animation-name: render-rect;
   animation-duration: 2.5s;
   animation-fill-mode: backwards;
@@ -105,22 +104,12 @@ body {
   transition: all 2.5s;
 }
 
-.diagram__unit_s:nth-child(1) {
-  fill: var(--red);
-  width: 190px;
+.diagram__unit-rect:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
-.diagram__unit_s:nth-child(2) {
-  fill: var(--blue);
-  width: 60px;
-}
-
-.diagram__unit_s:nth-child(3) {
-  fill: var(--orange);
-  width: 10px;
-}
-
-.diagram__legend-marker {
+.diagram__legend-marker-big {
   position: relative;
   padding-left: 10px;
   font-style: normal;
@@ -131,27 +120,38 @@ body {
   cursor: pointer;
 }
 
-.diagram__legend-marker_type_s {
+.diagram__legend-marker-small {
+  position: relative;
   margin: 0;
   font-style: normal;
   font-weight: 300;
   font-size: 10px;
+  list-style: none;
+  cursor: pointer;
 }
 
-.diagram__list {
+.diagram__list-big {
   display: flex;
   flex-direction: column;
   margin-top: 25px;
   padding: 0;
 }
 
-.diagram__list_type_s {
+.diagram__list-small {
+  display: flex;
   flex-direction: row;
+  margin-top: 5px;
+  padding: 0;
   justify-content: space-between;
   width: 190px;
 }
 
-.diagram__legend-marker::before {
+.diagram__legend-small {
+  position: relative;
+  left: 9px;
+}
+
+.diagram__legend-marker-big::before {
   content: "";
   position: absolute;
   top: 3px;
@@ -162,26 +162,61 @@ body {
   background-color: var(--gray);
 }
 
-.diagram__legend-marker:nth-child(1)::before {
+.diagram__legend-marker-big:nth-child(1)::before {
   background-color: var(--red);
 }
 
-.diagram__legend-marker:nth-child(2)::before {
+.diagram__legend-marker-big:nth-child(2)::before {
   background-color: var(--orange);
 }
 
-.diagram__legend-marker:nth-child(3)::before {
+.diagram__legend-marker-big:nth-child(3)::before {
   background-color: var(--blue);
 }
 
-.diagram__legend-marker:nth-child(4)::before {
+.diagram__legend-marker-big:nth-child(4)::before {
   background-color: var(--green);
 }
 
-.diagram__legend-marker:nth-child(5)::before {
+.diagram__legend-marker-big:nth-child(5)::before {
   background-color: var(--violet);
 }
 
-.diagram_hovered {
+.diagram__legend-marker-small::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -8px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50px;
+  background-color: var(--gray);
+}
+
+.diagram__legend-marker-small:nth-child(1)::before {
+  background-color: var(--red);
+}
+
+.diagram__legend-marker-small:nth-child(2)::before {
+  background-color: var(--orange);
+}
+
+.diagram__legend-marker-small:nth-child(3)::before {
+  background-color: var(--blue);
+}
+
+.diagram__legend-marker-small:nth-child(4)::before {
+  background-color: var(--green);
+}
+
+.diagram__legend-marker-small:nth-child(5)::before {
+  background-color: var(--violet);
+}
+
+.diagram_hovered-big {
   stroke-width: 18;
+}
+
+.diagram_hovered-small {
+  opacity: 0.8;
 }

@@ -4,18 +4,18 @@ class LegendItem {
     this._value = options[1];
   }
 
-  _getTemplate() {
+  _getTemplate(type) {
     const legengItemElement = document
-      .getElementById("diagrame-legend-item")
+      .getElementById(`diagrame-legend-item-${type}`)
       .content.cloneNode(true);
     return legengItemElement;
   }
 
-  generateLegendItem() {
-    this._legendItem = this._getTemplate();
-    this._legendItem.querySelector(".diagram__legend-marker").textContent =
-      this._key + "\u00A0" + this._value + "%";
-    console.log(this._legendItem);
+  generateLegendItem(type) {
+    this._legendItem = this._getTemplate(type);
+    this._legendItem.querySelector(`.diagram__legend-marker-${type}`).textContent =
+      this._key + ":\u00A0" + this._value + "%";
+    
     return this._legendItem;
   }
 }

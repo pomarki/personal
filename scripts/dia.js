@@ -9,20 +9,20 @@ const worksCards = [
       "https://github.com/pomarki/how-to-learn",
       
     ],
-    info: "проектная работа Яндекс.Практикума №2 закрепление навыков вёрстки",
+    info: "проектная работа Яндекс.Практикума №1 закрепление навыков вёрстки",
     stack: ["HTML5", "CSS3", "grid", "flex", "GIT", "Figma", "semantic"],
     languages: { html: 60, css: 30, js: 10 },
   },
   {
-    title: "ВЗДРЫЖНИ!!!",
-    mainlink: "https://pomarki.github.io/how-to-learn/",
+    title: "russian travel",
+    mainlink: "https://pomarki.github.io/russian-travel/",
     repolinks: [
-      "https://github.com/pomarki/how-to-learn",
+      "https://github.com/pomarki/russian-travel",
       
     ],
-    info: "проектная работа Яндекс.Практикума №2 закрепление навыков вёрстки",
-    stack: ["HTML5", "CSS3", "grid", "flex", "GIT", "Figma", "semantic"],
-    languages: { html: 10, css: 20, js: 30, re: 40 },
+    info: "проектная работа Яндекс.Практикума №2 адаптивная и отзывчивая вёрстка",
+    stack: ["HTML5", "CSS3", "grid", "flex", "GIT", "Figma", "semantic", "SVG"],
+    languages: { html: 52, css: 48 },
   },
 ];
 

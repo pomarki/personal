@@ -14,6 +14,7 @@
 }
 :root {
   --dark-blue: #073b4c;
+  --dark-green: #06D6A0;
   --black: #000000;
   --white: #ffffff;
   --blue: #118ab2;
@@ -48,23 +49,29 @@ body {
   flex-direction: row;
 }
 
-.diagram_type_s {
+.diagram_type_small {
   grid-row-start: 1;
   grid-row-end: 2;
   align-items: start;
   justify-content: center;
   flex-direction: column;
   z-index: 2;
+  margin-left: 110px;
 }
 
-.diagram__canvas {
+
+.diagram_type_invisible {
+  display: none;
+}
+
+.diagram__canvas-big {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 190px;
 }
 
-.diagram__canvas_type_s {
+.diagram__canvas_type_small {
   height: 10px;
 }
 

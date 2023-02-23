@@ -32,7 +32,14 @@ class WorkCard {
     Array.from(card.querySelectorAll(".stack__list-item")).forEach((i) => {
       i.classList.toggle("stack__list-item_type_S");
     });
-    card.querySelector(".diagram").classList.toggle("diagram_type_s")
+    card
+      .querySelector(".diagram_type_big")
+      .classList.toggle("diagram_type_invisible");
+
+    card
+      .querySelector(".diagram_type_small")
+      .classList.toggle("diagram_type_invisible");
+    card.querySelector(".works__button").classList.toggle("works__button_open");
   }
 
   generateCard() {
@@ -40,9 +47,11 @@ class WorkCard {
     const mainLink = this._card.querySelector(".works__link");
     const repoList = this._card.querySelector(".works__repo-list");
     const stackList = this._card.querySelector(".stack__list");
-    const diagramContainerBig = this._card.querySelector(".diagram__canvas");
+    const diagramContainerBig = this._card.querySelector(
+      ".diagram__canvas-big"
+    ); //diagram__canvas
     const diagramContainerSmall = this._card.querySelector(
-      ".diagram__canvas_type_s"
+      ".diagram__canvas_type_small"
     );
     const legendContainerBig = this._card.querySelector(".diagram__legend-big");
     const legendContainerSmall = this._card.querySelector(

@@ -3,11 +3,13 @@ import {
   startContainer,
   headerContainer,
   headerOptions,
+  worksCards,
 } from "../scripts/data.js";
 import { headerSection, sectionsArr, startSection } from "../scripts/constants.js";
 import { resetCards } from "../scripts/utilities.js";
 import { StartCard } from "../scripts/StartCard.js";
 import { Header } from "../components/Header.js";
+import { WorkCard } from "../components/WorkCard.js";
 
 const renderStartPage = () => {
   startContainer.classList.remove("start__container_type_invisible");
@@ -46,4 +48,12 @@ function renderHeader(id) {
   headerContainer.append(headerEl);
 }
 
-export { renderStartPage, renderHeader };
+function renderWorksSection(cards, conteiner) {
+  cards.forEach((item) => {
+    let cardEl = new WorkCard(item);
+    let cardItem = cardEl.generateCard();
+    conteiner.append(cardItem);
+  })
+}
+
+export { renderStartPage, renderHeader, renderWorksSection };

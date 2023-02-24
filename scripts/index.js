@@ -8,7 +8,8 @@ import {
 } from "./data.js";
 import { resetCards } from "./utilities.js";
 
-import { renderStartPage } from "../renders/renders.js";
+import { renderStartPage, renderWorksSection } from "../renders/renders.js";
+import { worksCards } from "./data.js";
 
 import {
   aboutSection,
@@ -29,14 +30,8 @@ import {
   headerStateBtn,
   headerThemeBtn,
   heaferLinksSlot,
+  worksList,
 } from "./constants.js";
-
-
-
-
-
-
-
 
 const toggleBookmark = (isOpen, location) => {
   if (location === "about") {
@@ -61,6 +56,8 @@ const toggleBookmark = (isOpen, location) => {
 };
 
 renderStartPage();
+
+renderWorksSection(worksCards, worksList);
 
 bookmarkAboutLabel.addEventListener("click", () => {
   toggleBookmark(true, "about");

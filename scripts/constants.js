@@ -32,6 +32,8 @@ const bookmarkLinksLabel = document.getElementById("bookmark-links-label");
 const bookmarkLinksBack = document.getElementById("bookmark-links-back");
 const startContainer = document.querySelector(".start__container ");
 
+const worksList = document.querySelector(".works__list");
+
 export {
   aboutSection,
   bodyBlock,
@@ -54,4 +56,5 @@ export {
   startContainer,
   sectionsArr,
   startSection,
+  worksList,
 };

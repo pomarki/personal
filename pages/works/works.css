@@ -1,5 +1,6 @@
 .works {
   display: none;
+  overflow: visible;
   font-family: "Source Code Pro", "Arial", "Helvetica";
 }
 

@@ -164,7 +164,7 @@ const worksCards = [
     repolinks: ["https://github.com/pomarki/how-to-learn"],
     info: "проектная работа Яндекс.Практикума №1 закрепление навыков вёрстки",
     stack: ["HTML5", "CSS3", "grid", "flex", "GIT", "Figma", "semantic"],
-    languages: { html: 60, css: 30, js: 10 },
+    languages: { html: 52, css: 48 },
   },
   {
     title: "russian travel",

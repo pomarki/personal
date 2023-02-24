@@ -12,40 +12,6 @@
     width: 100;
   }
 }
-:root {
-  --black: #000000;
-  --white: #ffffff;
-  --gray: #e4e7e2;
-  --light-gray: rgba(217, 217, 217, 0.1);
-
-  
-  --easy-green: #65e6c5; /*не работает в works*/
-  --green: #06d6a0;
-  --light-green: #a5f0dd;
-  --extra-light-green: #cdf7ec;
-
-  --blue: #118ab2;
-  --dark-blue: #073b4c;
-  --easy-blue: #6faed1;
-  --light-blue: #c3e2ec;
-  --extra-light-blue: #cfe4f0; /*не работает в works*/
-
-  --red: #ef476f;
-  --easy-red: #f7a7ba;
-  --light-red: #fbd1db;
-  --extra-light-red: #fcdae2;
-
-  --violet: #67468b;
-  --orange: #ffd166;
-}
-
-body {
-  display: flex;
-  width: 90vw;
-  height: 90vh;
-  align-items: center;
-  justify-content: center;
-}
 
 .diagram {
   position: relative;

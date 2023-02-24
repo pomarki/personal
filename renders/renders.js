@@ -7,7 +7,7 @@ import {
 } from "../scripts/data.js";
 import { headerSection, sectionsArr, startSection } from "../scripts/constants.js";
 import { resetCards } from "../scripts/utilities.js";
-import { StartCard } from "../scripts/StartCard.js";
+import { StartCard } from "../components/StartCard.js";
 import { Header } from "../components/Header.js";
 import { WorkCard } from "../components/WorkCard.js";
 

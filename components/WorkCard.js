@@ -67,7 +67,7 @@ class WorkCard {
       this._card
       .querySelector(".works__card-title")
       .classList.add(`works__card-title_${this._color}`);
-    
+      this._card.querySelector(".stack").classList.add(`stack_${this._color}`);
 
     // сборка главной ссылки
     mainLink.href = this._mainlink;

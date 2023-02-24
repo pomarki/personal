@@ -1,4 +1,4 @@
-import { StartCard } from "./StartCard.js";
+import { StartCard } from "../components/StartCard.js";
 import { Header } from "../components/Header.js";
 import {
   startArr,

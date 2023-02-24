@@ -15,11 +15,18 @@
   grid-row-start: 1;
   grid-row-end: 2;
   margin-bottom: 0;
-  background-color: var(--dark-green);
+}
+
+.stack_green {
+  background-color: var(--green);
 }
 
 .stack_blue {
   background-color: var(--blue);
+}
+
+.stack_red {
+  background-color: var(--red);
 }
 
 .stack__subtitle {

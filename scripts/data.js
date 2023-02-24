@@ -56,8 +56,8 @@ const circlesParams = {
   cy: "50%",
   "stroke-width": "15",
   fill: "none",
-  stroke: ["red", "orange", "blue", "green", "violet"]
-}
+  stroke: ["red", "orange", "blue", "green", "violet"],
+};
 
 const startArr = [
   {
@@ -156,6 +156,47 @@ const headerOptions = [
   },
 ];
 
+const worksCards = [
+  {
+    title: "how to learn",
+    color: "green",
+    mainlink: "https://pomarki.github.io/how-to-learn/",
+    repolinks: ["https://github.com/pomarki/how-to-learn"],
+    info: "проектная работа Яндекс.Практикума №1 закрепление навыков вёрстки",
+    stack: ["HTML5", "CSS3", "grid", "flex", "GIT", "Figma", "semantic"],
+    languages: { html: 60, css: 30, js: 10 },
+  },
+  {
+    title: "russian travel",
+    color: "red",
+    mainlink: "https://pomarki.github.io/russian-travel/",
+    repolinks: ["https://github.com/pomarki/russian-travel"],
+    info: "проектная работа Яндекс.Практикума №2 адаптивная и отзывчивая вёрстка",
+    stack: ["HTML5", "CSS3", "grid", "flex", "GIT", "Figma", "semantic", "SVG"],
+    languages: { html: 52, css: 48 },
+  },
+
+  {
+    title: "mesto",
+    color: "blue",
+    mainlink: "https://pomarki.github.io/mesto/",
+    repolinks: ["https://github.com/pomarki/mesto"],
+    info: "проектная работа Яндекс.Практикума №8. Подключение к бэку. Сборка Webpack. ООП (классы). Валидация форм.",
+    stack: [
+      "HTML5",
+      "CSS3",
+      "grid",
+      "flex",
+      "GIT",
+      "Figma",
+      "semantic",
+      "class",
+      "webpack",
+    ],
+    languages: { html: 16, css: 34, js: 50 },
+  },
+];
+
 export {
   circlesParams,
   morfingConst,
@@ -165,4 +206,5 @@ export {
   startContainer,
   headerContainer,
   headerOptions,
+  worksCards,
 };

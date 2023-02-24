@@ -6,6 +6,7 @@ import { Legend } from "./Legend.js";
 class WorkCard {
   constructor(options) {
     this._title = options.title;
+    this._color = options.color;
     this._mainlink = options.mainlink;
     this._repolinks = options.repolinks;
     this._info = options.info;
@@ -26,6 +27,7 @@ class WorkCard {
       .querySelector(".works__subtitle")
       .classList.toggle("works__subtitle_S");
     card.querySelector(".stack").classList.toggle("stack_type_S");
+    card.querySelector(".stack").classList.toggle(`stack_${this._color}`);
     card
       .querySelector(".stack__subtitle")
       .classList.toggle("stack__subtitle_type_S");
@@ -49,7 +51,7 @@ class WorkCard {
     const stackList = this._card.querySelector(".stack__list");
     const diagramContainerBig = this._card.querySelector(
       ".diagram__canvas-big"
-    ); //diagram__canvas
+    );
     const diagramContainerSmall = this._card.querySelector(
       ".diagram__canvas_type_small"
     );
@@ -57,6 +59,15 @@ class WorkCard {
     const legendContainerSmall = this._card.querySelector(
       ".diagram__legend-small"
     );
+
+    //установка цвета контейнера
+    this._card
+      .querySelector(".works__card")
+      .classList.add(`works__card_${this._color}`);
+      this._card
+      .querySelector(".works__card-title")
+      .classList.add(`works__card-title_${this._color}`);
+    
 
     // сборка главной ссылки
     mainLink.href = this._mainlink;
